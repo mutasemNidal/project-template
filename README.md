@@ -1,6 +1,7 @@
 # Adopt Saba
 
-Adopt-grandfather aims to ease the loneliness of the elderly in the community and strengthen their sense of independence, through contact with student volunteers. The duo meets once a week in the elderly home, the content of the meetings varies according to the participants' interests.
+Adopt-grandfather project aims to ease the loneliness of the elderly in the community and strengthen their sense of independence, through contact with student volunteers. The duo meets once a week in the elderly home, the content of the meetings varies according to the participants' interests.
+Our next step is to build an application that will allow volunteers to Write down their details in order to register for the program and specify the contents of the meeting with the elderly. We will transfer the details to the coordinators' interface so that they will check the details they had received and then submit final reports to the manager.
 
 
 
