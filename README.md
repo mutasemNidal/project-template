@@ -4,8 +4,7 @@ Adopt-grandfather aims to ease the loneliness of the elderly in the community an
 
 
 
-![project logo (this one for is taken from basecamp - a project management service)]
-(https://static.wixstatic.com/media/5310bb_a186d77f9d4f4dca9678c1e4ba1c6466.png)
+![project logo (this one for is taken from basecamp - a project management service)](https://static.wixstatic.com/media/5310bb_a186d77f9d4f4dca9678c1e4ba1c6466.png)
 
 ## Tools & Practices
 We're trying to use the best tools and practices in order to produce a quality enginneered product.
