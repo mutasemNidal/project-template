@@ -1,10 +1,10 @@
 # Adopt Saba
 
-Adopt-grandfather aims to ease the loneliness of the elderly in the community and strengthen their sense of independence, through contact between student volunteers. The duo meets once a week in the elderly home, the content of the meetings varies according to the participants' interests.
+Adopt-grandfather aims to ease the loneliness of the elderly in the community and strengthen their sense of independence, through contact with student volunteers. The duo meets once a week in the elderly home, the content of the meetings varies according to the participants' interests.
 
-(See also:rRecommended [checklist](https://github.com/ddbeck/readme-checklist/blob/master/checklist.md) for a README) 
 
-![project logo (this one for is taken from basecamp - a project management service)](https://www.klipfolio.com/sites/default/files/integrations/basecamp.png)
+
+https://static.wixstatic.com/media/5310bb_a186d77f9d4f4dca9678c1e4ba1c6466.png/v1/fill/w_380,h_235,al_c,usm_0.66_1.00_0.01/5310bb_a186d77f9d4f4dca9678c1e4ba1c6466.png
 
 ## Tools & Practices
 We're trying to use the best tools and practices in order to produce a quality enginneered product.
