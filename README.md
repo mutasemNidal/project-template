@@ -1,6 +1,6 @@
 # Adopt Saba
 
-A template repository with wiki for a team project at JCE's software engineering course (replace with the mission of your project).
+Adopt-grandfather aims to ease the loneliness of the elderly in the community and strengthen their sense of independence, through contact between student volunteers. The duo meets once a week in the elderly home, the content of the meetings varies according to the participants' interests.
 
 (See also:rRecommended [checklist](https://github.com/ddbeck/readme-checklist/blob/master/checklist.md) for a README) 
 
