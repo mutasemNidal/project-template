@@ -1,3 +1,4 @@
+![](https://drive.google.com/open?id=1zCnWANSvwOxKU6kjpDJqt1NQBvmbGZbD)
 # Adopt Saba
 
 Adopt-grandfather project aims to ease the loneliness of the elderly in the community and strengthen their sense of independence, through contact with student volunteers. The duo meets once a week in the elderly home, the content of the meetings varies according to the participants' interests.
