@@ -1,4 +1,4 @@
-![](https://media.giphy.com/media/XJBRGTzXX1h3BcBInQ/giphy.gif){:class="img-responsive"}
+![](https://media.giphy.com/media/XJBRGTzXX1h3BcBInQ/giphy.gif=100x20)
 
 # Adopt Saba
 
