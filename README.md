@@ -1,4 +1,4 @@
-![](https://media.giphy.com/media/XJBRGTzXX1h3BcBInQ/giphy.gif = 250x)
+![](https://media.giphy.com/media/XJBRGTzXX1h3BcBInQ/giphy.gif=250x)
 
 # Adopt Saba
 
