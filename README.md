@@ -15,7 +15,7 @@ Our next step is to build an application that will allow volunteers to Write dow
 
 
 ## FIRST PROTOTYPE
- [first prototype](https://drive.google.com/open?id=1hZggI-g98G8YU2dtdGOqNqa8MMp4Ds4B/view)
+ [first prototype](https://drive.google.com/drive/folders/1hZggI-g98G8YU2dtdGOqNqa8MMp4Ds4B)
 ## Tools & Practices
 We're trying to use the best tools and practices in order to produce a quality enginneered product.
 (replace 'jce-il/project-template' with your 'username/repo' and register to the relevant services)
