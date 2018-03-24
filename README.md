@@ -9,10 +9,7 @@ Adopt-grandfather project aims to ease the loneliness of the elderly in the comm
 Our next step is to build an application that will allow volunteers to Write down their details in order to register for the program and specify the contents of the meeting with the elderly. We will transfer the details to the coordinators' interface so that they will check the details they had received and then submit final reports to the manager.
 
 
-
-![project logo (this one for is taken from basecamp - a project management service)]<iframe width="560" height="315" src="https://www.youtube.com/embed/7xecsVgeLrs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7xecsVgeLrs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ## FIRST PROTOTYPE
 our project is divided for two parts.
