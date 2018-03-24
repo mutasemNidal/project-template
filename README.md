@@ -16,7 +16,7 @@ Our next step is to build an application that will allow volunteers to Write dow
 
 ## FIRST PROTOTYPE
 
-<img src="https://www.dropbox.com/s/wx5emav5qtdhj7m/LOGIN%20copy.jpg" width="70px"/>
+<img src="https://drive.google.com/file/d/11RwYU6GAxCPqCO8TecvHpZXxeBwHPOBk/view" width="70px"/>
 
 
  [first prototype](https://drive.google.com/drive/folders/1hZggI-g98G8YU2dtdGOqNqa8MMp4Ds4B)
