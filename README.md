@@ -15,14 +15,22 @@ Our next step is to build an application that will allow volunteers to Write dow
 
 
 ## FIRST PROTOTYPE
+our project is divided for two parts :
 
+first one is the managment reports :
 <a href="https://ibb.co/fYBE27"><img width="20%" src="https://preview.ibb.co/hy4qaS/LOGIN_copy.jpg" alt="LOGIN_copy" border="0"></a>
 <a href="https://ibb.co/ecfVaS"><img img width="20%" src="https://preview.ibb.co/j1kwFS/profile_copy.jpg" alt="profile_copy" border="0"></a>
 <a href="https://ibb.co/enhMh7"><img img width="20%" src="https://preview.ibb.co/j34qaS/rakazem.jpg" alt="rakazem" border="0"></a>
 <a href="https://ibb.co/bUaJUn"><img img width="20%" src="https://preview.ibb.co/mF0VaS/report.jpg" alt="report" border="0"></a><br />
 
-
- [first prototype](https://drive.google.com/drive/folders/1hZggI-g98G8YU2dtdGOqNqa8MMp4Ds4B)
+second part application for android and ios:
+<a href="https://ibb.co/k8ba9n"><img width="20%" src="https://thumb.ibb.co/k8ba9n/1.jpg" alt="1" border="0"></a> 
+<a href="https://ibb.co/hWtoUn"><img width="20%" src="https://thumb.ibb.co/hWtoUn/2.jpg" alt="2" border="0"></a> 
+<a href="https://ibb.co/bN3Bh7"><img width="20%" src="https://thumb.ibb.co/bN3Bh7/3.jpg" alt="3" border="0"></a>
+<a href="https://ibb.co/ixBWh7"><img width="20%" src="https://thumb.ibb.co/ixBWh7/4.jpg" alt="4" border="0"></a>
+<a href="https://ibb.co/ebc427"><img width="20%" src="https://thumb.ibb.co/ebc427/5.jpg" alt="5" border="0"></a>
+<a href="https://ibb.co/naYNpn"><img width="20%" src="https://thumb.ibb.co/naYNpn/6.jpg" alt="6" border="0"></a>
+ 
 ## Tools & Practices
 We're trying to use the best tools and practices in order to produce a quality enginneered product.
 (replace 'jce-il/project-template' with your 'username/repo' and register to the relevant services)
