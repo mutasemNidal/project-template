@@ -24,7 +24,7 @@ first one is the managment reports :
 <a href="https://ibb.co/enhMh7"><img img width="20%" src="https://preview.ibb.co/j34qaS/rakazem.jpg" alt="rakazem" border="0"></a>
 <a href="https://ibb.co/bUaJUn"><img img width="20%" src="https://preview.ibb.co/mF0VaS/report.jpg" alt="report" border="0"></a><br />
 <hr>
-second part application for android and ios:
+second part application for android and ios:<br>
 <a href="https://ibb.co/k8ba9n"><img width="10%" src="https://thumb.ibb.co/k8ba9n/1.jpg" alt="1" border="0"></a> 
 <a href="https://ibb.co/hWtoUn"><img width="10%" src="https://thumb.ibb.co/hWtoUn/2.jpg" alt="2" border="0"></a> 
 <a href="https://ibb.co/bN3Bh7"><img width="10%" src="https://thumb.ibb.co/bN3Bh7/3.jpg" alt="3" border="0"></a>
