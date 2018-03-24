@@ -17,7 +17,7 @@ Our next step is to build an application that will allow volunteers to Write dow
 ## FIRST PROTOTYPE
 our project is divided for two parts.
 
-<b>first one is the managment reports :<b>
+<b>First One is the reports management:<b>
 
 <a href="https://ibb.co/fYBE27"><img width="20%" src="https://preview.ibb.co/hy4qaS/LOGIN_copy.jpg" alt="LOGIN_copy" border="0"></a>
 <a href="https://ibb.co/ecfVaS"><img img width="20%" src="https://preview.ibb.co/j1kwFS/profile_copy.jpg" alt="profile_copy" border="0"></a>
