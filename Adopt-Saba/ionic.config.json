@@ -1,0 +1,8 @@
+{
+  "name": "Adopt-Saba",
+  "app_id": "b0244340",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

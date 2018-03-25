@@ -1,0 +1,40 @@
+.myho {
+background-color: #ff3333;
+backface-visibility: initial;
+background-size: initial;
+
+}
+.logo img{
+    width:100%;
+    height:90%;
+    margin-top: 5px;
+}
+.logo{
+ 
+    background-color: white;
+    border-block-start-color: tomato;
+    height: 150px;
+    width: 150px;
+    margin:auto;
+    border-radius: 75px;
+    border : 8px solid #D98856;
+    box-shadow: -2px 3px 2px  ;
+   
+}
+.buttons{
+    width: 100%;
+    text-align:center;
+    text-decoration-style: wavy;
+  
+}
+.buttons button{
+    
+    text-align:center;
+    font-family: "Times New Roman", Times, serif;
+    font-style: oblique;
+    font-size: 40px;
+    border-radius:50%;
+    background: #D98856;
+    border : 8px solid rgb(224, 137, 83);
+    box-shadow: -2px 3px 2px  ;
+}
