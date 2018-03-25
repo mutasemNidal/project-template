@@ -64,7 +64,7 @@ Please visit our wiki for furthur project info:
 ### [Team Page](https://github.com/mutasemNidal/Adopt-Saba/wiki/Team-Page)
 
 ### Project Documents
-- [Project Idea](docs/idea.pdf) ([Presentation](docs/idea-slides.pdf))
+- [Project Idea](https://github.com/mutasemNidal/Adopt-Saba/wiki) 
 - [Project Inception](https://github.com/mutasemNidal/Adopt-Saba/wiki/Inception-Planning)
 - [Software Requirements Specification](../../wiki/srs)
 - [Software Design Specification](../../wiki/sds)
