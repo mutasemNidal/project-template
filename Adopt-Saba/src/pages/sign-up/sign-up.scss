@@ -1,0 +1,40 @@
+#title{
+    text-align: center;
+    font-size: 40px;
+    margin-top: 40px;
+    font-family: monospace;
+    font-style: italic;
+    color: white;
+}
+#home{
+    background:linear-gradient(to right,rgb(253, 58, 33),#FD8E63) ;              /* color */
+}
+.sign-up{ 
+    height: 150px;
+    width: 150px;
+    margin:auto;
+    margin-top: 15px;
+    border-radius:100%;
+    border : 8px solid #D98856;
+    box-shadow: -2px 3px 2px #000; 
+}
+#user{
+    margin-top: 8px;
+    background-color: transparent;
+}
+#email{
+    margin-top: 3px;
+    background-color: transparent;
+}
+#pass{
+    margin-top: 3px;
+    background-color: transparent;
+}
+#repass{
+    margin-top: 3px;
+    background-color: transparent;
+}
+#contact{
+    margin-top: 3px;
+    background-color: transparent;
+}
