@@ -5,25 +5,20 @@
   Ionic pages and navigation.
 -->
 <ion-content id="home" >
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>signIn</ion-title>
-  </ion-navbar>
-</ion-header>
-<h1 id="title">Sign In</h1>
-<div class="sign-in" >
-        <img  src="/assets/logIn.png" alt="Mountain View">
-      </div>
-      <ion-list>
-        <ion-item class="inputs">
-          <ion-input  type="text" placeholder ="username"  ></ion-input>
-        </ion-item>
-        <ion-item class="inputs">
-          <ion-input  type="text" placeholder ="password"  ></ion-input>
-        </ion-item>
-      </ion-list>
-      <div class="buttons" >
-        <button ion-button>sign In</button>
-    </div>
+  <ion-navbar></ion-navbar>
+  <h1 id="title">Sign In</h1>
+  <div class="sign-in" >
+  
+  </div>
+  <ion-item id="user">
+    <ion-label color="light" floating>User Name</ion-label>
+    <ion-input type="text" ></ion-input>
+    </ion-item>
+  <ion-item id="pass">
+      <ion-label color="light" floating>Password</ion-label>
+      <ion-input type="password"></ion-input>
+  </ion-item>
+  <div class="btn">
+    <button ion-button>sign In</button>
+  </div>
 </ion-content>

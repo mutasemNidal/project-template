@@ -1,16 +1,5 @@
-.myho {
-    /*background-color: #fd8f63;
-    backface-visibility: initial;
-    background-size: initial;*/
-    background:
-        
-         top center / 200px 200px /* position / size */
-         no-repeat                /* repeat */
-         fixed                    /* attachment */
-         padding-box              /* origin */
-         content-box              /* clip */
-         #fd8f63 ;                     /* color */
-    
+    .myho {
+        background:linear-gradient(to right,rgb(253, 58, 33),#FD8E63) ;              /* color */
     }
     .logo img{
         width:100%;
@@ -18,32 +7,44 @@
         margin: auto;
     }
     .logo{
-     
         background-color: white;
-        border-block-start-color: fd8556;
-        height: 150px;
-        width: 150px;
+        height: 200px;
+        width: 200px;
         margin:auto;
-        border-radius: 75px;
+        margin-top: 50px;
+        border-radius: 100%;
         border : 8px solid #D98856;
         box-shadow: -2px 3px 2px  ;
-       
     }
-    .buttons{
+    #button1{
         width: 100%;
         text-align:center;
         text-decoration-style: wavy;
-        padding: 10%;
     }
-    .buttons button{
-        
+    #button2{
+        width: 100%;
         text-align:center;
-        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-        //font-style: italic;
+        text-decoration-style: wavy;
+    }
+    #button1 button{ 
+        text-align:center;
+        font-family: monospace;
         font-size: 20px;
-        border:70%;
-        background: #D98856;
-        border : 8px solid rgb(224, 137, 83);
-        box-shadow: -2px 3px 2px  ;
-        
+        color: white;
+        background:linear-gradient(to left,rgb(253, 58, 33),#FD8E63) ;              /* color */
+        box-shadow: -2px 3px 2px #000  ;
+        margin:20px;
+        width:70%;
+        border-radius: 50px;
+    }
+    #button2 button{ 
+        text-align:center;
+        font-family: monospace;
+        font-size: 20px;
+        color: white;
+        width:70%;
+        margin:20px;
+        background:linear-gradient(to left,rgb(253, 58, 33),#FD8E63) ;              /* color */
+        box-shadow: -2px 3px 2px #000 ;
+        border-radius: 50px;
     }
