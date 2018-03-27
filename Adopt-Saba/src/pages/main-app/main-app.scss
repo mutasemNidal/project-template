@@ -1,0 +1,96 @@
+#home{
+    background:linear-gradient(to right,rgb(253, 58, 33),#FD8E63) ;
+}
+.menu{
+    width: 100%;
+    height: 60px;
+}
+#iconDiv{
+    float: left;
+    width: 40px;
+    height: 60px;
+    background-color: white;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius:100%;
+    border-bottom-right-radius: 100%;
+}
+#icon{
+    font-size: 40px;
+    margin-top: 10px;
+}
+.menu img{
+    width: 60px;
+    height: 60px;
+    float: right;
+    margin-top: 5px;
+}
+.btn1{
+    width: 97%;
+    height: 50px;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 7px;
+}
+.btn1 button{
+    width: 70px;
+    height: 45px;
+    color:black;
+    background-color: transparent;
+    font-size: 30px;
+}
+.date{
+    width: 97%;
+    background-color: black;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+.date h1{
+    font-size: 20px;
+    text-align: center;
+    color: white;
+}
+#back{
+    background-color: white;
+    border-radius: 20px;
+}
+.btn2{
+    margin-top: 5px;
+}
+.btn2 button{
+    border-radius: 100%;
+    border: 2px solid black;
+    color: black;
+    font-size: 30px;
+    width: 60px;
+    height: 60px;
+    background:linear-gradient(to left,rgb(253, 58, 33),#FD8E63) ;
+    margin-left: 35px;
+}
+.btn3{
+    margin-top: 5px;
+    text-align: center;
+}
+.btn3 button{
+    border-radius: 100%;
+    border: 2px solid black;
+    color: black;
+    font-size: 30px;
+    width: 180px;
+    height: 180px;
+    background:linear-gradient(to left,rgb(253, 58, 33),#FD8E63) ;
+}
+.timer{
+    background: linear-gradient(to right,rgb(253, 58, 33),#FD8E63) ;
+    width: 100%;
+    height: 16%;
+    text-align: center;
+}
+.timer h1{
+    font-size: 40px;
+}
