@@ -36,11 +36,12 @@
     margin-top: 7px;
 }
 .btn1 button{
-    width: 70px;
+    width: 50px;
     height: 45px;
     color:black;
     background-color: transparent;
-    font-size: 30px;
+    font-size: 25px;
+    box-shadow: none !important;
 }
 .date{
     width: 97%;
@@ -61,6 +62,7 @@
 }
 .btn2{
     margin-top: 5px;
+    text-align: center;
 }
 .btn2 button{
     border-radius: 100%;
@@ -70,7 +72,6 @@
     width: 60px;
     height: 60px;
     background:linear-gradient(to left,rgb(253, 58, 33),#FD8E63) ;
-    margin-left: 35px;
 }
 .btn3{
     margin-top: 5px;
@@ -91,6 +92,6 @@
     height: 16%;
     text-align: center;
 }
-.timer h1{
+.timer label{
     font-size: 40px;
 }

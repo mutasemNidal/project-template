@@ -11,6 +11,7 @@ import { SignUpPage } from '../pages/sign-up/sign-up';
 import { MainAppPage } from '../pages/main-app/main-app';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MainAppPage
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     IonicModule.forRoot(MyApp)
   ],

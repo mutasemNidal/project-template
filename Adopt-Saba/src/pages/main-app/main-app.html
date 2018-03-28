@@ -22,14 +22,16 @@
   <div id="back">
     <div class="btn2">
       <button ion-button><ion-icon name="md-refresh"></ion-icon></button>
-      <button ion-button><ion-icon name="logo-instagram"></ion-icon></button>
-      <button ion-button><ion-icon name="md-arrow-dropright"></ion-icon></button>
+      <button (click)="takePic()" ion-button><ion-icon name="logo-instagram"></ion-icon></button>
+      <button *ngIf = "changeBool==true"(click)="timerFunc()" ion-button ><ion-icon name="md-arrow-dropright"></ion-icon></button>
+      <button *ngIf = "changeBool==false"(click)="timerFunc()" ion-button ><ion-icon name="md-square"></ion-icon></button>
     </div>
     <div class="btn3">
-      <button ion-button>Start</button>
+      <button *ngIf = "changeBool==true"(click)="timerFunc()"  ion-button>start</button>
+      <button *ngIf = "changeBool==false"(click)="timerFunc()"  ion-button>stop</button>
     </div>
   </div>
   <div class="timer">
-      <h1>00:00:00</h1>
+      <label>{{hours}}</label><label>:</label><label>{{minute}}</label><label>:</label><label>{{second}}</label>
   </div>
 </ion-content>
