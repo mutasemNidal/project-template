@@ -17,21 +17,22 @@
       <button ion-button><ion-icon name="ios-contact"></ion-icon></button>
   </div>
   <div class="date">
-    <h1>27/3/2018  Tuesday  4:47 PM</h1>
+      <ion-item>
+          <ion-label>Date</ion-label>
+          <ion-datetime displayFormat="MMM DD, YYYY HH:mm:ss" [(ngModel)]="myDate"></ion-datetime>
+        </ion-item>
   </div>
   <div id="back">
     <div class="btn2">
       <button ion-button><ion-icon name="md-refresh"></ion-icon></button>
       <button (click)="takePic()" ion-button><ion-icon name="logo-instagram"></ion-icon></button>
-      <button *ngIf = "changeBool==true"(click)="timerFunc()" ion-button ><ion-icon name="md-arrow-dropright"></ion-icon></button>
-      <button *ngIf = "changeBool==false"(click)="timerFunc()" ion-button ><ion-icon name="md-square"></ion-icon></button>
+      <button (click)="stop()" ion-button ><ion-icon name="md-square"></ion-icon></button>
     </div>
     <div class="btn3">
-      <button *ngIf = "changeBool==true"(click)="timerFunc()"  ion-button>start</button>
-      <button *ngIf = "changeBool==false"(click)="timerFunc()"  ion-button>stop</button>
+      <button (click)="timerFunc()"  ion-button>{{txt}}</button>
     </div>
   </div>
   <div class="timer">
-      <label>{{hours}}</label><label>:</label><label>{{minute}}</label><label>:</label><label>{{second}}</label>
+      <p  >{{hour}}:{{minute}}:{{second}}</p>
   </div>
 </ion-content>
