@@ -34,5 +34,7 @@
   </div>
   <div class="timer">
       <p  >{{hour}}:{{minute}}:{{second}}</p>
+      Latest Picture:
+      <img [src]="base64Image" *ngIf="base64Image" />
   </div>
 </ion-content>
