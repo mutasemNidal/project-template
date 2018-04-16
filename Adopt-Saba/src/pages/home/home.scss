@@ -16,35 +16,61 @@
         border : 8px solid #D98856;
         box-shadow: -2px 3px 2px  ;
     }
-    #button1{
+    .button1{
         width: 100%;
         text-align:center;
         text-decoration-style: wavy;
     }
-    #button2{
+    .button2{
         width: 100%;
         text-align:center;
         text-decoration-style: wavy;
     }
-    #button1 button{ 
-        text-align:center;
-        font-family: monospace;
-        font-size: 20px;
-        color: white;
-        background:linear-gradient(to left,rgb(253, 58, 33),#FD8E63) ;              /* color */
-        box-shadow: -2px 3px 2px #000  ;
-        margin:20px;
-        width:70%;
-        border-radius: 50px;
-    }
-    #button2 button{ 
+    .button1 button{
         text-align:center;
         font-family: monospace;
         font-size: 20px;
         color: white;
         width:70%;
         margin:20px;
-        background:linear-gradient(to left,rgb(253, 58, 33),#FD8E63) ;              /* color */
-        box-shadow: -2px 3px 2px #000 ;
+        background:linear-gradient(to left,#fd3a21,#FD8E63) ;
         border-radius: 50px;
+        box-shadow: 3px 4px 0px 0px #8a2a21;
+        border-radius:18px;
+        display:inline-block;
+        cursor:pointer;
+        text-decoration:none;
+        text-shadow:0px 1px 0px #810e05;
+    }
+    .button1 button:hover {
+        background:linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
+        background-color:#f24437;
+    }
+    .button1 button:active {
+        position:relative;
+        top:1px;
+    }
+    .button2 button{
+        text-align:center;
+        font-family: monospace;
+        font-size: 20px;
+        color: white;
+        width:70%;
+        margin:20px;
+        background:linear-gradient(to left,#fd3a21,#FD8E63) ;
+        border-radius: 50px;
+        box-shadow: 3px 4px 0px 0px #8a2a21;
+        border-radius:18px;
+        display:inline-block;
+        cursor:pointer;
+        text-decoration:none;
+        text-shadow:0px 1px 0px #810e05;
+    }
+    .button2 button:hover {
+        background:linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
+        background-color:#f24437;
+    }
+    .button2 button:active {
+        position:relative;
+        top:1px;
     }

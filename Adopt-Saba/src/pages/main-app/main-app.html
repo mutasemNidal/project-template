@@ -10,21 +10,21 @@
     <div id="iconDiv"><ion-icon id="icon" name="ios-menu"></ion-icon></div>
     <img src="/assets/LOGO.png"/>
   </div>
-  <div class="btn1">
+  <div class="nav">
       <button ion-button><ion-icon name="ios-call"></ion-icon></button>
       <button ion-button><ion-icon name="md-notifications"></ion-icon></button>
       <button ion-button><ion-icon name="md-calendar"></ion-icon></button>
       <button ion-button><ion-icon name="ios-contact"></ion-icon></button>
   </div>
-  <div class="date">
-      <ion-item>
-          <ion-label>Date</ion-label>
-          <ion-datetime displayFormat="MMM DD, YYYY HH:mm:ss" [(ngModel)]="myDate"></ion-datetime>
-        </ion-item>
+  <div>
+    <ion-item class="date">
+        <ion-label>Date</ion-label>
+        <ion-datetime displayFormat="DD/MM/YYYY  HH:mm:ss" [(ngModel)]="myDate"></ion-datetime>
+    </ion-item>
   </div>
   <div id="back">
     <div class="btn2">
-      <button ion-button><ion-icon name="md-refresh"></ion-icon></button>
+      <button (click)="reStart()" ion-button><ion-icon name="md-refresh"></ion-icon></button>
       <button (click)="takePic()" ion-button><ion-icon name="logo-instagram"></ion-icon></button>
       <button (click)="stop()" ion-button ><ion-icon name="md-square"></ion-icon></button>
     </div>
@@ -33,7 +33,7 @@
     </div>
   </div>
   <div class="timer">
-      <p  >{{hour}}:{{minute}}:{{second}}</p>
+      <p  >{{hourL}}{{hourR}}:{{minuteL}}{{minuteR}}:{{secondL}}{{secondR}}</p>
       Latest Picture:
       <img [src]="base64Image" *ngIf="base64Image" />
   </div>
