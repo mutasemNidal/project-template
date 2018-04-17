@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { Observable } from 'rxjs/Observable';
 import {ChangeDetectorRef} from '@angular/core';
 import { Camera} from '@ionic-native/camera';
 import { AlertController } from 'ionic-angular';
-import { CameraPreview, CameraPreviewPictureOptions, CameraPreviewOptions, CameraPreviewDimensions } from '@ionic-native/camera-preview';
 
 /**
  * Generated class for the MainAppPage page.
@@ -23,21 +21,9 @@ export class MainAppPage {
   myDate = new Date(new Date().getTime()+(3*60*60*1000)).toISOString();
   public base64Image: string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,private ref:ChangeDetectorRef,private alertCtrl: AlertController,private camera:Camera , private cameraPreview:CameraPreview ) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,private ref:ChangeDetectorRef,private alertCtrl: AlertController,private camera:Camera) {
    
   }
-  cameraPreviewOpts: CameraPreviewOptions = {
-    x: 0,
-    y: 0,
-    width: window.screen.width,
-    height: window.screen.height,
-    camera: 'rear',
-    tapPhoto: true,
-    previewDrag: true,
-    toBack: true,
-    alpha: 1
-  };
-
   hourL=0;
   minuteL=0;
   secondL=0;
@@ -187,5 +173,108 @@ export class MainAppPage {
     clearInterval(this.intrevalId);
     this.txt="Start";
     this.intrevalId = -1;
+    let alert = this.alertCtrl.create({
+      title: 'דוח ',
+      subTitle	:'אנא ציין/י את אופי המפגשים (ניתן ורצוי לבחור יותר מאחת) *',
+      inputs: [
+        {
+          type:'checkbox',
+       label:'משחקי חברה',
+       
+        },
+        {
+          type:'checkbox',
+          label:'שיחות אקטואליה',
+        }
+        ,
+        {
+          type:'checkbox',
+          label:'שימוש במחשב',
+        },
+        {
+          type:'checkbox',
+          label:'פעילות מחוץ לבית הקשיש',
+        },
+        {
+          type:'checkbox',
+          label:'בישול',
+        },
+        {
+          type:'checkbox',
+          label:'מוזיקה',
+        },
+        {
+          type:'checkbox',
+          label:'other',
+        },
+      ],
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          handler: data => {
+            console.log('Cancel clicked');
+          }
+        },
+        {
+          text: 'submit',
+          handler: data => {
+            let alert = this.alertCtrl.create({
+              title: 'האם היו אירועים חריגים הדורשים התערבות גורם מוסמך?/ אירועים חיוביים שתרצה לחלוק איתנו?',
+              inputs: [
+                {
+                  name: 'text',
+                  placeholder: 'enter your text'
+                }
+              ],
+              buttons: [
+                {
+                  text: 'Cancel',
+                  role: 'cancel',
+                  handler: data => {
+                    console.log('Cancel clicked');
+                  }
+                },
+                {
+                  text: 'submit',
+                  handler: data => {
+                    let alert = this.alertCtrl.create({
+                      message: 'נשמח אם תצרפ/י תמונה מהמפגש!',
+                      buttons: [
+                        {
+                          text: 'take pic',
+                          role: 'cancel',
+                          handler: () => {
+                          this.takePic();
+                          }
+                        },
+                        {
+                          text: 'Cancel',
+                          role: 'cancel',
+                          handler: () => {
+                            console.log('Cancel clicked');
+                          }
+                        },
+                        {
+                          text: 'submit',
+                          handler: () => {
+                            console.log('Buy clicked');
+                          }
+                        }
+                      ]
+                    });
+                    alert.present();
+                  }
+                }
+              ]
+            });
+            alert.present();
+          }
+       
+        }
+        
+      ]
+    });
+    alert.present();
   }
 }
