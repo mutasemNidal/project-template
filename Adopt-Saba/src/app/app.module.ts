@@ -14,7 +14,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { FormsModule } from '@angular/forms';
 import { Camera } from '@ionic-native/camera';
 import { CameraPreview } from '@ionic-native/camera-preview';
-
+import {CallNumber} from '@ionic-native/call-number';
 @NgModule({
   declarations: [
     MyApp,
@@ -44,7 +44,7 @@ import { CameraPreview } from '@ionic-native/camera-preview';
   ],
   providers: [
     StatusBar,
-    SplashScreen,Camera,CameraPreview,
+    SplashScreen,Camera,CameraPreview,CallNumber,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

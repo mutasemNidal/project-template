@@ -3,6 +3,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {ChangeDetectorRef} from '@angular/core';
 import { Camera} from '@ionic-native/camera';
 import { AlertController } from 'ionic-angular';
+import { CallNumber } from '@ionic-native/call-number';
+
 
 /**
  * Generated class for the MainAppPage page.
@@ -20,9 +22,10 @@ import { AlertController } from 'ionic-angular';
 export class MainAppPage {
   myDate = new Date(new Date().getTime()+(3*60*60*1000)).toISOString();
   public base64Image: string;
-
-  constructor(public navCtrl: NavController, public navParams: NavParams,private ref:ChangeDetectorRef,private alertCtrl: AlertController,private camera:Camera) {
-   
+  imagesCount:number;
+  images :string[]=[];
+  constructor(public navCtrl: NavController, public navParams: NavParams,private callNumber: CallNumber,private ref:ChangeDetectorRef,private alertCtrl: AlertController,private camera:Camera) {
+   this.imagesCount=0;
   }
   hourL=0;
   minuteL=0;
@@ -34,6 +37,11 @@ export class MainAppPage {
   temp1=false;
   txt="Start";
   intrevalId:number;
+  pushImage(name:string){
+    this.images[this.imagesCount]=name;
+    this.imagesCount++;
+  }
+
   intrevalDate= setInterval(() => {
    this.myDate = new Date(new Date().getTime()+(3*60*60*1000)).toISOString();
   },1000)
@@ -51,6 +59,7 @@ export class MainAppPage {
     }).then((imageData) => {
       // imageData is a base64 encoded string
         this.base64Image = "data:image/jpeg;base64," + imageData;
+        this.pushImage(this.base64Image);
     }, (err) => {
         console.log(err);
     });
@@ -238,32 +247,7 @@ export class MainAppPage {
                 {
                   text: 'submit',
                   handler: data => {
-                    let alert = this.alertCtrl.create({
-                      message: 'נשמח אם תצרפ/י תמונה מהמפגש!',
-                      buttons: [
-                        {
-                          text: 'take pic',
-                          role: 'cancel',
-                          handler: () => {
-                          this.takePic();
-                          }
-                        },
-                        {
-                          text: 'Cancel',
-                          role: 'cancel',
-                          handler: () => {
-                            console.log('Cancel clicked');
-                          }
-                        },
-                        {
-                          text: 'submit',
-                          handler: () => {
-                            console.log('Buy clicked');
-                          }
-                        }
-                      ]
-                    });
-                    alert.present();
+                    //sent data to the website
                   }
                 }
               ]
@@ -276,5 +260,10 @@ export class MainAppPage {
       ]
     });
     alert.present();
+  }
+  call(){
+    this.callNumber.callNumber("0502145087", true);
+
+
   }
 }

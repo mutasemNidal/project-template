@@ -11,7 +11,7 @@
     <img src="/assets/LOGO.png"/>
   </div>
   <div class="nav">
-      <button ion-button><ion-icon name="ios-call"></ion-icon></button>
+      <button ion-button (click)="call()"><ion-icon name="ios-call"></ion-icon></button>
       <button ion-button><ion-icon name="md-notifications"></ion-icon></button>
       <button ion-button><ion-icon name="md-calendar"></ion-icon></button>
       <button ion-button><ion-icon name="ios-contact"></ion-icon></button>
@@ -35,6 +35,6 @@
   <div class="timer">
       <p  >{{hourL}}{{hourR}}:{{minuteL}}{{minuteR}}:{{secondL}}{{secondR}}</p>
       Latest Picture:
-      <img [src]="base64Image" *ngIf="base64Image" />
+        <img *ngFor="let image of images" [src]="image"/>
   </div>
 </ion-content>
