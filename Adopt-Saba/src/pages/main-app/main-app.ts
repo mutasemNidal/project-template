@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import {ChangeDetectorRef} from '@angular/core';
 import { Camera} from '@ionic-native/camera';
 import { AlertController } from 'ionic-angular';
-import { CallNumber } from '@ionic-native/call-number';
-
+import { ScreenOrientation } from '@ionic-native/screen-orientation';
 
 /**
  * Generated class for the MainAppPage page.
@@ -24,8 +22,9 @@ export class MainAppPage {
   public base64Image: string;
   imagesCount:number;
   images :string[]=[];
-  constructor(public navCtrl: NavController, public navParams: NavParams,private callNumber: CallNumber,private ref:ChangeDetectorRef,private alertCtrl: AlertController,private camera:Camera) {
+  constructor(public navCtrl: NavController, private screenOrientation: ScreenOrientation ,public navParams: NavParams,private alertCtrl: AlertController,private camera:Camera) {
    this.imagesCount=0;
+   this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.PORTRAIT);
   }
   hourL=0;
   minuteL=0;
@@ -37,20 +36,25 @@ export class MainAppPage {
   temp1=false;
   txt="Start";
   intrevalId:number;
+    /********************************************************************************************************************************************** */
+
   pushImage(name:string){
     this.images[this.imagesCount]=name;
     this.imagesCount++;
   }
+  /********************************************************************************************************************************************** */
 
   intrevalDate= setInterval(() => {
    this.myDate = new Date(new Date().getTime()+(3*60*60*1000)).toISOString();
   },1000)
 
+  /********************************************************************************************************************************************** */
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MainAppPage');
   }
-  
+/********************************************************************************************************************************************** */
+
   takePic(){
     this.camera.getPicture({
         destinationType: this.camera.DestinationType.DATA_URL,
@@ -64,6 +68,7 @@ export class MainAppPage {
         console.log(err);
     });
   }
+  /********************************************************************************************************************************************** */
   timerFunc(){
     this.temp1=true;
     if(this.temp==true){
@@ -117,65 +122,11 @@ export class MainAppPage {
           this.hourL=0; 
           this.secondR++;
         }
-        this.ref.detectChanges();
       }, 1000);
     }
   }
-  reStart(){
-    if(this.temp1==true){
-      clearInterval(this.intrevalId);
-      this.hourR=0;
-      this.minuteR=0;
-      this.secondR=0;
-      this.hourL=0;
-      this.minuteL=0;
-      this.secondL=0;
-      this.txt="started";
-      this.intrevalId = setInterval(() => {
-        this.secondR++;
-        if(this.secondR==10){
-          this.secondR=0;
-          this.secondL++;
-        }
-        if(this.secondL==6){
-          this.secondR=0;
-          this.secondL=0;
-          this.minuteR++;
-        }
-        if(this.minuteR==10){
-          this.secondR=0;
-          this.secondL=0;
-          this.minuteR=0;
-          this.minuteL++;
-        }
-        if(this.minuteL==6){
-          this.secondR=0;
-          this.secondL=0;
-          this.minuteR=0;
-          this.minuteL=0; 
-          this.hourR++;  
-        }
-        if(this.hourR==10){
-          this.secondR=0;
-          this.secondL=0;
-          this.minuteR=0;
-          this.minuteL=0; 
-          this.hourR=0;
-          this.hourL++;  
-        }
-        if(this.hourL==2&&this.hourR==4){
-          this.secondR=0;
-          this.secondL=0;
-          this.minuteR=0;
-          this.minuteL=0; 
-          this.hourR=0;
-          this.hourL=0; 
-          this.secondR++;
-        }
-        this.ref.detectChanges();
-      }, 1000);
-    }
-  }
+   /********************************************************************************************************************************************** */
+
   stop(){
     this.temp=true;
     this.temp1=false;
@@ -261,9 +212,15 @@ export class MainAppPage {
     });
     alert.present();
   }
+    /********************************************************************************************************************************************** */
+
   call(){
-    this.callNumber.callNumber("0502145087", true);
+    setTimeout(() => {
+      let tel="0502145087";
+      window.open(`tel:${tel}`, '_system');
+    }, 100);
 
 
   }
+ 
 }

@@ -25,6 +25,7 @@
     "@ionic-native/camera": "^4.7.0",
     "@ionic-native/camera-preview": "^4.7.0",
     "@ionic-native/core": "4.5.3",
+    "@ionic-native/screen-orientation": "^4.7.0",
     "@ionic-native/splash-screen": "4.5.3",
     "@ionic-native/status-bar": "4.5.3",
     "@ionic/pro": "1.0.20",
@@ -32,6 +33,7 @@
     "call-number": "^1.0.1",
     "cordova-plugin-camera": "^4.0.2",
     "cordova-plugin-camera-preview": "^0.9.0",
+    "cordova-plugin-screen-orientation": "^3.0.1",
     "ionic-angular": "3.9.2",
     "ionicons": "3.0.0",
     "ng": "0.0.0-rc6",
@@ -47,7 +49,9 @@
   "cordova": {
     "plugins": {
       "cordova-plugin-camera": {},
-      "cordova-plugin-camera-preview": {}
+      "cordova-plugin-camera-preview": {},
+      "mx.ferreyra.callnumber": {},
+      "cordova-plugin-screen-orientation": {}
     }
   }
 }
