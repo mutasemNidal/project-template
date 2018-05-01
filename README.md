@@ -50,7 +50,12 @@ We're trying to use the best tools and practices in order to produce a quality e
 | Documnetation | [![Inline docs](http://inch-ci.org/github/jce-il/project-template.svg?branch=master)](https://github.com/mutasemNidal/Adopt-Saba#project-documents) |
 | Project Course Status | ... |
 
-## Please visit our [live application](https://manifest-stream-142322.firebaseapp.com/)
+## Please visit our [live application](https://adopt-saba.firebaseapp.com/)
+### Steps to see the phone application not the website:
+1. When you access to the live application open the inspect by (ctrl+shift+i).
+2. Click on responsive button above the device and choose iphone x.
+3. To sign in :UserName:Admin , Password:1234.
+4. Enjoy!!!.
 
 ## Disclaimer
 This project is developed as part of the requirements for a [software engineering course](https://github.com/jce-il/se-class/wiki) at the software engineering department - [Azrieli College of Engineering](http://www.jce.ac.il/), Jerusalem, Israel.
