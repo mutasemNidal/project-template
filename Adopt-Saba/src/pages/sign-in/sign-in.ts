@@ -9,6 +9,8 @@ import { ScreenOrientation } from '@ionic-native/screen-orientation';
 })
 export class SignInPage {
   YourFancyButton3: any;
+  userName:string;
+  password:string;
   constructor(public navCtrl: NavController, public navParams: NavParams, private screenOrientation: ScreenOrientation) {
     this.YourFancyButton3 =MainAppPage;
     this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.PORTRAIT);
