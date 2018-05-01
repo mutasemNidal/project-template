@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "manifest-stream-142322"
+    "default": "manifest-stream-142322",
+    "staging": "adopt-saba"
   }
 }
