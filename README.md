@@ -56,7 +56,7 @@ We're trying to use the best tools and practices in order to produce a quality e
 2. Click on responsive button above the device and choose iphone x.
 3. To sign in :UserName:Admin , Password:1234.
 4. Enjoy!!!.<br>
-**Note** The application not complete yet it hava bugs and buttons that not working 
+<b>Note</b> The application not complete yet it hava bugs and buttons that not working 
 
 ## Disclaimer
 This project is developed as part of the requirements for a [software engineering course](https://github.com/jce-il/se-class/wiki) at the software engineering department - [Azrieli College of Engineering](http://www.jce.ac.il/), Jerusalem, Israel.
