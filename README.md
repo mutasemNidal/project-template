@@ -55,7 +55,7 @@ We're trying to use the best tools and practices in order to produce a quality e
 1. When you access to the live application open the inspect by (ctrl+shift+i).
 2. Click on responsive button above the device and choose iphone x.
 3. To sign in :UserName:Admin , Password:1234.
-4. Enjoy!!!.
+4. Enjoy!!!.<br>
 **Note** The application not complete yet it hava bugs and buttons that not working 
 
 ## Disclaimer
