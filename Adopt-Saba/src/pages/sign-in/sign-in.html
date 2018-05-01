@@ -12,13 +12,13 @@
   </div>
   <ion-item id="user">
     <ion-label color="light" floating>User Name</ion-label>
-    <ion-input type="text" [(ngModel)]="userName"></ion-input>
+    <ion-input clearInput type="text" [(ngModel)]="userName"></ion-input>
     </ion-item>
   <ion-item id="pass">
       <ion-label color="light" floating>Password</ion-label>
-      <ion-input type="password" [(ngModel)]="password"></ion-input>
+      <ion-input clearInput type="password" [(ngModel)]="password"></ion-input>
   </ion-item>
   <div class="btn">
-    <button ion-button [navPush]="YourFancyButton3">sign in</button>
+    <button ion-button (click)="logIN()" [navPush]="YourFancyButton3">sign in</button>
   </div>
 </ion-content>

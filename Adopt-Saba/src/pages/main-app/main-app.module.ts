@@ -6,10 +6,11 @@ import { Camera } from '@ionic-native/camera';
 import {CallNumber}from'@ionic-native/call-number'
 @NgModule({
   declarations: [
-    MainAppPage,FormsModule
+    MainAppPage
   ],
   imports: [
     IonicPageModule.forChild(MainAppPage),
+    FormsModule
   ],
   providers: [  Camera,CallNumber
   ]

@@ -12,26 +12,26 @@
     </div>
     <ion-item id="user">        
         <ion-label  color="light" floating> <ion-icon name="ios-person-outline"></ion-icon>  User Name</ion-label>
-        <ion-input clearInput type="text"></ion-input>
+        <ion-input [(ngModel)]="userName" clearInput type="text"></ion-input>
     </ion-item>
     <ion-item id="email">
         <ion-label color="light" floating><ion-icon name="ios-at-outline"></ion-icon>  Email</ion-label>
-        <ion-input clearInput type="text"></ion-input>
+        <ion-input [(ngModel)]="email" clearInput type="text"></ion-input>
     </ion-item>
     <ion-item id="pass">
         <ion-label color="light" floating><ion-icon name="ios-lock-outline"></ion-icon>  Password</ion-label>
-        <ion-input clearInput type="password"></ion-input>
+        <ion-input [(ngModel)]="password" clearInput type="password"></ion-input>
     </ion-item>
     <ion-item id="repass">
         <ion-label color="light" floating><ion-icon name="ios-lock-outline"></ion-icon>  Confirm Password</ion-label>
-        <ion-input clearInput type="password"></ion-input>
+        <ion-input [(ngModel)]="confirmPass" clearInput type="password"></ion-input>
     </ion-item>
     <ion-item id="contact">
         <ion-label color="light" floating><ion-icon name="ios-phone-portrait-outline"></ion-icon>  Contact number</ion-label>
-        <ion-input clearInput type="number"></ion-input>
+        <ion-input [(ngModel)]="phoneNumber" clearInput type="number"></ion-input>
     </ion-item>
     <div class="btn">
-      <button ion-button>Join</button>
+      <button ion-button (click)="join()">Join</button>
     </div>
 </ion-content>
   

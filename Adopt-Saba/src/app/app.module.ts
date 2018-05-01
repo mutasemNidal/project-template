@@ -16,6 +16,8 @@ import { Camera } from '@ionic-native/camera';
 import { CameraPreview } from '@ionic-native/camera-preview';
 import {CallNumber} from '@ionic-native/call-number';
 import { ScreenOrientation } from '@ionic-native/screen-orientation';
+import { MainAppPageModule } from '../pages/main-app/main-app.module';
+import { SignUpPageModule } from '../pages/sign-up/sign-up.module';
 
 @NgModule({
   declarations: [
@@ -24,13 +26,13 @@ import { ScreenOrientation } from '@ionic-native/screen-orientation';
     ContactPage,
     HomePage,
     TabsPage,
-    SignInPage,
-    SignUpPage,
-    MainAppPage
+    SignInPage
   ],
   imports: [
     FormsModule,
     BrowserModule,
+    MainAppPageModule,
+    SignUpPageModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
