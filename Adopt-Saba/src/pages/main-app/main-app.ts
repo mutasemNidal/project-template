@@ -4,6 +4,7 @@ import { Camera } from '@ionic-native/camera';
 import { AlertController } from 'ionic-angular';
 import { ScreenOrientation } from '@ionic-native/screen-orientation';
 import { MenuController } from 'ionic-angular';
+import{HomePage} from '../home/home'
 
 /**
  * Generated class for the MainAppPage page.
@@ -19,6 +20,8 @@ import { MenuController } from 'ionic-angular';
 
 })
 export class MainAppPage {
+  YourFancyButton: any;
+
   myDate = new Date(new Date().getTime() + (3 * 60 * 60 * 1000)).toISOString();
   public base64Image: string;
   imagesCount: number;
@@ -246,5 +249,28 @@ menu(){
 
     this.menuCtrl.open();
   }
+/**********************************************************************************************************************************************/
+signout(){
+  let alert = this.alertCtrl.create({
+    title: 'Confirm sign out',
+    message: 'Do you want to sign out?',
+    buttons: [
+      {
+        text: 'Cancel',
+        role: 'cancel',
+        handler: () => {
+          console.log('Cancel clicked');
+        }
+      },
+      {
+        text: 'confirm',
+        handler: () => {
+          this.navCtrl.setRoot(HomePage);
+        }
+      }
+    ]
+  });
+  alert.present();
+}
 
 }
