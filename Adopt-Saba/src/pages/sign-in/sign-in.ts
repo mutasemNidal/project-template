@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import {MainAppPage } from '../main-app/main-app';
 import { ScreenOrientation } from '@ionic-native/screen-orientation';
 import { AlertController } from 'ionic-angular';
 
@@ -18,18 +17,18 @@ export class SignInPage {
   }
 
   logIN(){
-    if(this.userName=="Admin" &&this.password=="1234"){
+   // if(this.userName=="Admin" &&this.password=="1234"){
         this.navCtrl.setRoot("MainAppPage");
-    }else{
-      let alert = this.alertCtrl.create({
-        title: 'Invaled user name or password !!!',
-        buttons: [
-          {
-            text: 'submit',
-          }
-        ]
-      });
-      alert.present();
-    }
-  }
+  //   }else{
+  //     let alert = this.alertCtrl.create({
+  //       title: 'Invaled user name or password !!!',
+  //       buttons: [
+  //         {
+  //           text: 'submit',
+  //         }
+  //       ]
+  //     });
+  //     alert.present();
+  //   }
+   }
 }

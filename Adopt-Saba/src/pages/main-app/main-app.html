@@ -5,9 +5,17 @@
   Ionic pages and navigation.
 -->
 <ion-content id="home" >
-    <ion-navbar></ion-navbar>
+    <ion-menu [content]="mycontent">
+        <ion-content>
+          <ion-list>
+            <ion-item menuClose detail-none>Close Menu</ion-item>
+          </ion-list>
+        </ion-content>
+      </ion-menu>
+  
+  <ion-nav #mycontent [root]="rootPage"></ion-nav>
   <div class="menu">
-    <div id="iconDiv"><ion-icon id="icon" name="ios-menu"></ion-icon></div>
+      <button id="iconDiv" (click)="menu()" ion-button menuToggle><ion-icon id="icon" name="ios-menu"></ion-icon></button>
     <img src="/assets/LOGO.png"/>
   </div>
   <div class="nav">

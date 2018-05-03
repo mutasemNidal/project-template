@@ -33,7 +33,15 @@ import { SignUpPageModule } from '../pages/sign-up/sign-up.module';
     BrowserModule,
     MainAppPageModule,
     SignUpPageModule,
-    IonicModule.forRoot(MyApp)
+      IonicModule.forRoot(MyApp,{
+        menuType: 'push',
+        platforms: {
+          ios: {
+            menuType: 'overlay',
+          }
+        }
+      })
+    
   ],
   bootstrap: [IonicApp],
   entryComponents: [

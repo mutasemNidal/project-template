@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Camera } from '@ionic-native/camera';
 import { AlertController } from 'ionic-angular';
 import { ScreenOrientation } from '@ionic-native/screen-orientation';
+import { MenuController } from 'ionic-angular';
 
 /**
  * Generated class for the MainAppPage page.
@@ -14,7 +15,7 @@ import { ScreenOrientation } from '@ionic-native/screen-orientation';
 @IonicPage()
 @Component({
   selector: 'page-main-app',
-  templateUrl: 'main-app.html',
+  templateUrl: 'main-app.html'
 
 })
 export class MainAppPage {
@@ -22,9 +23,11 @@ export class MainAppPage {
   public base64Image: string;
   imagesCount: number;
   images: string[] = [];
-  constructor(public navCtrl: NavController, private screenOrientation: ScreenOrientation, public navParams: NavParams, private alertCtrl: AlertController, private camera: Camera) {
+  constructor(public navCtrl: NavController,public menuCtrl: MenuController, private screenOrientation: ScreenOrientation, public navParams: NavParams, private alertCtrl: AlertController, private camera: Camera) {
     this.imagesCount = 0;
     this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.PORTRAIT);
+   // menu.enable(true);
+
   }
   hourL = 0;
   minuteL = 0;
@@ -238,4 +241,10 @@ export class MainAppPage {
       window.open(`tel:${tel}`, '_system');
     }, 100);
   }
+/**********************************************************************************************************************************************/
+menu(){
+
+    this.menuCtrl.open();
+  }
+
 }
