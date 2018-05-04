@@ -1,24 +1,48 @@
 #home{
-    background:linear-gradient(to right,rgb(253, 58, 33),#FD8E63) ;
+    background:linear-gradient(to right,#fd3a21,#FD8E63) ;
 }
 .menu{
     width: 100%;
     height: 14%;
     margin-top: 3%;
 }
+#menuHeader{
+    background-color: black;
+    color: white;
+}
+#menuDiv{
+    background:linear-gradient(to bottom,#fd3a21,#FD8E63);
+}
+#menuTitle{
+    float: left;
+    margin-top: 4%;
+    font-size: 25px;
+    font-family: Pacifico;
+}
+#menuImg{
+    float: right;
+    width: 110px;
+}
 #iconDiv{
     float: left;
-    width: 15%;
+    width: 12%;
     height: 65%;
     background-color: white;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+    border-top-left-radius: -1;
+    border-bottom-left-radius: -1;
     border-top-right-radius:100%;
     border-bottom-right-radius: 100%;
 }
+#menuBtn{
+    margin-top: 32%;
+    width: 50%;
+    background-color: transparent;
+    box-shadow: none !important;
+}
 #icon{
-    font-size: 400%;
+    font-size: 320%;
     margin-top: 10%;
+    color: black;
 }
 .menu img{
     width: 30%;
@@ -118,7 +142,16 @@
     font-size: 380%;
     margin-top: 5%;
 }
-#signout{
-    font-size: 20px;
-    margin-top: 10%;
+#menuItem{
+    font-size: 25px;
+    background-color: transparent;
+    width: 100%;
+    text-align: left;
+}
+#menuItem:active {
+    position:relative;
+    top:1px;
+}
+#menuIcon{
+    font-size: 45px;
 }

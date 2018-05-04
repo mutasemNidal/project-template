@@ -5,7 +5,6 @@ import { MyApp } from './app.component';
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
-import { TabsPage } from '../pages/tabs/tabs';
 import { SignInPage } from '../pages/sign-in/sign-in';
 import { SignUpPage } from '../pages/sign-up/sign-up';
 import { MainAppPage } from '../pages/main-app/main-app';
@@ -25,7 +24,6 @@ import { SignUpPageModule } from '../pages/sign-up/sign-up.module';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage,
     SignInPage
   ],
   imports: [
@@ -34,7 +32,7 @@ import { SignUpPageModule } from '../pages/sign-up/sign-up.module';
     MainAppPageModule,
     SignUpPageModule,
       IonicModule.forRoot(MyApp,{
-        menuType: 'push',
+        menuType: 'overlay',
         platforms: {
           ios: {
             menuType: 'overlay',
@@ -49,7 +47,6 @@ import { SignUpPageModule } from '../pages/sign-up/sign-up.module';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage,
     SignInPage,
     SignUpPage,
     MainAppPage

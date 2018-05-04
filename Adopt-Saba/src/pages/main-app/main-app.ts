@@ -4,7 +4,9 @@ import { Camera } from '@ionic-native/camera';
 import { AlertController } from 'ionic-angular';
 import { ScreenOrientation } from '@ionic-native/screen-orientation';
 import { MenuController } from 'ionic-angular';
-import{HomePage} from '../home/home'
+import { HomePage } from '../home/home'
+import { AboutPage } from '../about/about'
+import { ContactPage } from '../contact/contact'
 
 /**
  * Generated class for the MainAppPage page.
@@ -26,10 +28,10 @@ export class MainAppPage {
   public base64Image: string;
   imagesCount: number;
   images: string[] = [];
-  constructor(public navCtrl: NavController,public menuCtrl: MenuController, private screenOrientation: ScreenOrientation, public navParams: NavParams, private alertCtrl: AlertController, private camera: Camera) {
+  constructor(public navCtrl: NavController, public menuCtrl: MenuController, private screenOrientation: ScreenOrientation, public navParams: NavParams, private alertCtrl: AlertController, private camera: Camera) {
     this.imagesCount = 0;
     this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.PORTRAIT);
-   // menu.enable(true);
+    // menu.enable(true);
 
   }
   hourL = 0;
@@ -132,7 +134,6 @@ export class MainAppPage {
     }
   }
   /********************************************************************************************************************************************** */
-
   stop() {
     this.temp = true;
     this.temp1 = false;
@@ -218,7 +219,7 @@ export class MainAppPage {
         ]
       });
       alert.present();
-    }else{
+    } else {
       let alert = this.alertCtrl.create({
         title: '!!!תתחיל הטיימר קודם',
         buttons: [
@@ -244,33 +245,45 @@ export class MainAppPage {
       window.open(`tel:${tel}`, '_system');
     }, 100);
   }
-/**********************************************************************************************************************************************/
-menu(){
+  /**********************************************************************************************************************************************/
+  menu() {
 
     this.menuCtrl.open();
   }
-/**********************************************************************************************************************************************/
-signout(){
-  let alert = this.alertCtrl.create({
-    title: 'Confirm sign out',
-    message: 'Do you want to sign out?',
-    buttons: [
-      {
-        text: 'Cancel',
-        role: 'cancel',
-        handler: () => {
-          console.log('Cancel clicked');
+  /**********************************************************************************************************************************************/
+  signout() {
+    let alert = this.alertCtrl.create({
+      title: 'Confirm sign out',
+      message: 'Do you want to sign out?',
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          handler: () => {
+            console.log('Cancel clicked');
+          }
+        },
+        {
+          text: 'confirm',
+          handler: () => {
+            this.navCtrl.setRoot(HomePage);
+          }
         }
-      },
-      {
-        text: 'confirm',
-        handler: () => {
-          this.navCtrl.setRoot(HomePage);
-        }
-      }
-    ]
-  });
-  alert.present();
-}
-
+      ]
+    });
+    alert.present();
+  }
+  /**********************************************************************************************************************************************/
+  home() {
+    this.navCtrl.setRoot(HomePage);
+  }
+  /**********************************************************************************************************************************************/
+  about() {
+    this.navCtrl.setRoot(AboutPage);
+  }
+  /**********************************************************************************************************************************************/
+  contact() {
+    this.navCtrl.setRoot(ContactPage);
+  }
+  /**********************************************************************************************************************************************/
 }
