@@ -48,7 +48,6 @@ We're trying to use the best tools and practices in order to produce a quality e
 | Deployment | [![Heroku](http://heroku-badge.herokuapp.com/?app=my-app&style=flat&svg=1&root=index.html)] |
 | Security | [![Known Vulnerabilities](https://snyk.io/test/github/jce-il/project-template/badge.svg)](https://snyk.io/test/github/jce-il/project-template) |
 | Documnetation | [![Inline docs](http://inch-ci.org/github/jce-il/project-template.svg?branch=master)](https://github.com/mutasemNidal/Adopt-Saba#project-documents) |
-| Project Course Status | ... |
 
 ## Please visit our [live application](https://adopt-saba.firebaseapp.com/)
 ### Steps to see the phone application not the website:
@@ -78,8 +77,8 @@ Please visit our [wiki](../../wiki) for furthur project info:
 ### Iteration Pages
 - [Iteration 0 - ZFR](https://github.com/mutasemNidal/Adopt-Saba/wiki/ZFR)
 - [Iteration 1 - MVP](https://github.com/mutasemNidal/Adopt-Saba/wiki/MVP)
-- [Iteration 2 - XYZ](https://github.com/mutasemNidal/Adopt-Saba/wiki/Iter2-xyz)
-- [Iteration 3 - XYZ]()
+- [Iteration 2 - appFinishing](https://github.com/mutasemNidal/Adopt-Saba/wiki/Iter2-app-finishing)
+- [Iteration 3 - WebSiteFinishing](https://github.com/mutasemNidal/Adopt-Saba/wiki/iter3-WebSiteFinishing)
 - [Iteration 4 - XYZ]()
 
 
