@@ -42,6 +42,8 @@ export class MainAppPage {
   secondR = 0;
   temp = true;
   temp1 = false;
+  show = false;
+  inShow=false;
   txt = "Start";
   intrevalId: number;
   /********************************************************************************************************************************************** */
@@ -286,4 +288,9 @@ export class MainAppPage {
     this.navCtrl.setRoot(ContactPage);
   }
   /**********************************************************************************************************************************************/
+  showProfile() {
+    this.show = !this.show;
+    this.inShow=true;
+  }
+  
 }

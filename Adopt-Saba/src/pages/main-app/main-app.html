@@ -32,7 +32,6 @@
       </ion-list>
     </ion-content>
   </ion-menu>
-
   <ion-nav #mycontent [root]="rootPage"></ion-nav>
   <div class="menu">
     <div id="iconDiv">
@@ -52,7 +51,7 @@
     <button ion-button icon-only>
       <ion-icon name="md-calendar"></ion-icon>
     </button>
-    <button ion-button icon-only>
+    <button ion-button icon-only (click)="showProfile()">
       <ion-icon name="ios-contact"></ion-icon>
     </button>
   </div>
@@ -82,5 +81,16 @@
     <p>{{hourL}}{{hourR}}:{{minuteL}}{{minuteR}}:{{secondL}}{{secondR}}</p>
     Latest Picture:
     <img *ngFor="let image of images" [src]="image" />
+  </div>
+  <div id="profile" *ngIf="show">
+    <div id="divImg">
+      
+    </div>
+    <div class="info">
+      <label>Name:Diaaldin Krea</label><br>
+      <label>Phone:0526041850</label><br>
+      <label>Coordinator:Mutasem</label><br>
+      <label>ID:312304694</label>
+    </div>
   </div>
 </ion-content>

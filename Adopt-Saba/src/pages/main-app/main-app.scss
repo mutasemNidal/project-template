@@ -69,6 +69,33 @@
     font-size:  130%;
     box-shadow: none !important;
 }
+#profile{
+    margin-top: -127%;
+    margin-left: 8%;
+    border-radius: 7%;
+    width: 85%;
+    height: 50%;
+    background:linear-gradient(to top,#fd3a21,#FD8E63) ;
+    border: 2px solid black;
+    position: fixed;
+    box-shadow: 10px 11px 32px 0px rgba(0,0,0,0.77);
+
+}
+#divImg{
+    margin: auto;
+    border-radius: 50%;
+    background-color: white;
+    width: 30%;
+    height: 30%;
+    margin-top: 5%;
+}
+.info{
+    margin-left: 2%;
+}
+.info label{
+    font-size: 20px;
+    font-family: Pacifico;
+}
 .date{
     width: 95%;
     border-radius: 10px;
