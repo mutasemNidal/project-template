@@ -42,8 +42,8 @@
     <img src="/assets/LOGO.png" />
   </div>
   <div class="nav">
-    <button ion-button icon-only >
-      <ion-icon name="ios-call" (click)="call()"></ion-icon>
+    <button ion-button (click)="call()" icon-only>
+      <ion-icon name="ios-call"></ion-icon>
     </button>
     <button ion-button icon-only>
       <ion-icon name="md-notifications"></ion-icon>
@@ -67,7 +67,7 @@
         <ion-icon name="md-refresh"></ion-icon>
       </button>
       <button (click)="takePic()" ion-button>
-        <ion-icon name="logo-instagram"></ion-icon>
+        <ion-icon name="ios-camera"></ion-icon>
       </button>
       <button (click)="stop()" ion-button>
         <ion-icon name="md-square"></ion-icon>
@@ -83,14 +83,15 @@
     <img *ngFor="let image of images" [src]="image" />
   </div>
   <div id="profile" *ngIf="show">
-    <div id="divImg">
-      
-    </div>
+    <img class="divCover" src="../../assets/imgs/picture.jpg" alt="nice">
+    <img class="divImg" src="../../assets/imgs/picture.jpg" alt="nice">
     <div class="info">
-      <label>Name:Diaaldin Krea</label><br>
-      <label>Phone:0526041850</label><br>
-      <label>Coordinator:Mutasem</label><br>
-      <label>ID:312304694</label>
+      <p>Name:{{volunteerName}}
+        <br> Phone:{{volunteerNum}}
+        <br> Coordinator:{{coordName}}
+        <br> ID:{{idNum}}
+      </p>
     </div>
+    <button id="cancel" (click)="show=false">Cancel</button>
   </div>
 </ion-content>

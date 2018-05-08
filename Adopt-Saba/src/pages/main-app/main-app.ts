@@ -43,8 +43,11 @@ export class MainAppPage {
   temp = true;
   temp1 = false;
   show = false;
-  inShow=false;
   txt = "Start";
+  volunteerName = "";
+  volunteerNum = "";
+  coordName = "";
+  idNum = "";
   intrevalId: number;
   /********************************************************************************************************************************************** */
 
@@ -290,7 +293,10 @@ export class MainAppPage {
   /**********************************************************************************************************************************************/
   showProfile() {
     this.show = !this.show;
-    this.inShow=true;
+    this.volunteerName = "Anita";
+    this.volunteerNum = "0566666666";
+    this.coordName = "Mutasem";
+    this.idNum = "159487623";
   }
-  
+
 }
