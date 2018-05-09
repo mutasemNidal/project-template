@@ -17,6 +17,7 @@ import {CallNumber} from '@ionic-native/call-number';
 import { ScreenOrientation } from '@ionic-native/screen-orientation';
 import { MainAppPageModule } from '../pages/main-app/main-app.module';
 import { SignUpPageModule } from '../pages/sign-up/sign-up.module';
+import { HTTP } from '@ionic-native/http';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,7 @@ import { SignUpPageModule } from '../pages/sign-up/sign-up.module';
   ],
   providers: [
     StatusBar,
-    SplashScreen,Camera,CameraPreview,CallNumber,ScreenOrientation,
+    SplashScreen,Camera,CameraPreview,CallNumber,ScreenOrientation,HTTP,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
