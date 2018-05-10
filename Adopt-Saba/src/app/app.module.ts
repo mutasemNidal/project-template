@@ -13,10 +13,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { FormsModule } from '@angular/forms';
 import { Camera } from '@ionic-native/camera';
 import { CameraPreview } from '@ionic-native/camera-preview';
-import {CallNumber} from '@ionic-native/call-number';
+import { CallNumber } from '@ionic-native/call-number';
 import { ScreenOrientation } from '@ionic-native/screen-orientation';
 import { MainAppPageModule } from '../pages/main-app/main-app.module';
 import { SignUpPageModule } from '../pages/sign-up/sign-up.module';
+import { NotificationsPage } from '../pages/notifications/notifications';
+import { NotificationsPageModule } from '../pages/notifications/notifications.module';
 
 @NgModule({
   declarations: [
@@ -24,22 +26,22 @@ import { SignUpPageModule } from '../pages/sign-up/sign-up.module';
     AboutPage,
     ContactPage,
     HomePage,
-    SignInPage
+    SignInPage,
   ],
   imports: [
     FormsModule,
     BrowserModule,
     MainAppPageModule,
     SignUpPageModule,
-      IonicModule.forRoot(MyApp,{
-        menuType: 'overlay',
-        platforms: {
-          ios: {
-            menuType: 'overlay',
-          }
+    NotificationsPageModule,
+    IonicModule.forRoot(MyApp, {
+      menuType: 'overlay',
+      platforms: {
+        ios: {
+          menuType: 'overlay',
         }
-      })
-    
+      }
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -49,12 +51,13 @@ import { SignUpPageModule } from '../pages/sign-up/sign-up.module';
     HomePage,
     SignInPage,
     SignUpPage,
-    MainAppPage
+    MainAppPage,
+    NotificationsPage
   ],
   providers: [
     StatusBar,
-    SplashScreen,Camera,CameraPreview,CallNumber,ScreenOrientation,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    SplashScreen, Camera, CameraPreview, CallNumber, ScreenOrientation,
+    { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
-export class AppModule {}
+export class AppModule { }

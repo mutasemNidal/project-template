@@ -7,6 +7,8 @@ import { MenuController } from 'ionic-angular';
 import { HomePage } from '../home/home'
 import { AboutPage } from '../about/about'
 import { ContactPage } from '../contact/contact'
+import { PopoverController } from 'ionic-angular';
+import { NotificationsPage } from '../notifications/notifications';
 
 /**
  * Generated class for the MainAppPage page.
@@ -28,7 +30,7 @@ export class MainAppPage {
   public base64Image: string;
   imagesCount: number;
   images: string[] = [];
-  constructor(public navCtrl: NavController, public menuCtrl: MenuController, private screenOrientation: ScreenOrientation, public navParams: NavParams, private alertCtrl: AlertController, private camera: Camera) {
+  constructor(public navCtrl: NavController,public popoverCtrl: PopoverController, public menuCtrl: MenuController, private screenOrientation: ScreenOrientation, public navParams: NavParams, private alertCtrl: AlertController, private camera: Camera) {
     this.imagesCount = 0;
     this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.PORTRAIT);
     // menu.enable(true);
@@ -299,4 +301,10 @@ export class MainAppPage {
     this.idNum = "159487623";
   }
 
+  notify(myEvent){
+    let popover = this.popoverCtrl.create(NotificationsPage);
+    popover.present({
+      ev: myEvent
+    });
+  }
 }
