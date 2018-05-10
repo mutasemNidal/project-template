@@ -7,15 +7,16 @@
 <ion-content id="home">
   <ion-menu [content]="mycontent">
     <ion-header>
-      <ion-toolbar>
+      <div class="toolBar">
         <ion-title>
           <div id="menuTitle">Adopt Saba</div>
           <img id="menuImg" src="../../assets/logo.png" />
         </ion-title>
-      </ion-toolbar>
+      </div>
     </ion-header>
-    <ion-content id="menuDiv">
+    <ion-content class="menuDiv">
       <ion-list>
+        <div id="def"></div>
         <button id="menuItem" (click)="home()" ion-item>
           <ion-icon id="menuIcon" name="ios-home-outline" item-left></ion-icon> HOME
         </button>

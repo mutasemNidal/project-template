@@ -6,16 +6,21 @@
     height: 14%;
     margin-top: 3%;
 }
-#menuHeader{
-    background-color: black;
-    color: white;
+.ios{
+    #def{
+        margin-top: -14%;
+    }
 }
-#menuDiv{
+.toolBar{
+    padding-top: 10%;
+    background-color: white;
+}
+.menuDiv{
     background:linear-gradient(to bottom,#fd3a21,#FD8E63);
 }
 #menuTitle{
     float: left;
-    margin-top: 4%;
+    margin-left: 2%;
     font-size: 25px;
     font-family: Pacifico;
 }
