@@ -20,6 +20,10 @@ import { SignUpPageModule } from '../pages/sign-up/sign-up.module';
 import { NotificationsPage } from '../pages/notifications/notifications';
 import { NotificationsPageModule } from '../pages/notifications/notifications.module';
 import { HTTP } from '@ionic-native/http';
+import { CalendarPageModule } from '../pages/calendar/calendar.module';
+import { CalendarPage } from '../pages/calendar/calendar';
+import { ProfilePage } from '../pages/profile/profile';
+import { ProfilePageModule } from '../pages/profile/profile.module';
 
 @NgModule({
   declarations: [
@@ -35,6 +39,8 @@ import { HTTP } from '@ionic-native/http';
     MainAppPageModule,
     SignUpPageModule,
     NotificationsPageModule,
+    CalendarPageModule,
+    ProfilePageModule,
     IonicModule.forRoot(MyApp, {
       menuType: 'overlay',
       platforms: {
@@ -53,7 +59,9 @@ import { HTTP } from '@ionic-native/http';
     SignInPage,
     SignUpPage,
     MainAppPage,
-    NotificationsPage
+    NotificationsPage,
+    CalendarPage,
+    ProfilePage
   ],
   providers: [
     StatusBar,

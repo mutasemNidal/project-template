@@ -9,6 +9,8 @@ import { AboutPage } from '../about/about'
 import { ContactPage } from '../contact/contact'
 import { PopoverController } from 'ionic-angular';
 import { NotificationsPage } from '../notifications/notifications';
+import { CalendarPage } from '../calendar/calendar';
+import { ProfilePage } from '../profile/profile';
 
 /**
  * Generated class for the MainAppPage page.
@@ -293,16 +295,21 @@ export class MainAppPage {
     this.navCtrl.setRoot(ContactPage);
   }
   /**********************************************************************************************************************************************/
-  showProfile() {
-    this.show = !this.show;
-    this.volunteerName = "Anita";
-    this.volunteerNum = "0566666666";
-    this.coordName = "Mutasem";
-    this.idNum = "159487623";
+  showProfile(myEvent) {
+    let popover = this.popoverCtrl.create(ProfilePage);
+    popover.present({
+      ev: myEvent
+    });
   }
 
   notify(myEvent){
     let popover = this.popoverCtrl.create(NotificationsPage);
+    popover.present({
+      ev: myEvent
+    });
+  }
+  calender(myEvent){
+    let popover = this.popoverCtrl.create(CalendarPage);
     popover.present({
       ev: myEvent
     });

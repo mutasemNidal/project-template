@@ -47,13 +47,13 @@
     <button ion-button (click)="call()" icon-only>
       <ion-icon name="ios-call"></ion-icon>
     </button>
-    <button ion-button icon-only  (click)="notify($event)">
+    <button ion-button icon-only (click)="notify($event)">
       <ion-icon name="md-notifications"></ion-icon>
     </button>
-    <button ion-button icon-only>
+    <button ion-button icon-only (click)="calender($event)">
       <ion-icon name="md-calendar"></ion-icon>
     </button>
-    <button ion-button icon-only (click)="showProfile()">
+    <button ion-button icon-only (click)="showProfile($event)">
       <ion-icon name="ios-contact"></ion-icon>
     </button>
   </div>
@@ -83,17 +83,5 @@
     <p>{{hourL}}{{hourR}}:{{minuteL}}{{minuteR}}:{{secondL}}{{secondR}}</p>
     Latest Picture:
     <img *ngFor="let image of images" [src]="image" />
-  </div>
-  <div id="profile" *ngIf="show">
-    <img class="divCover" src="../../assets/imgs/picture.jpg" alt="nice">
-    <img class="divImg" src="../../assets/imgs/picture.jpg" alt="nice">
-    <div class="info">
-      <p>Name:{{volunteerName}}
-        <br> Phone:{{volunteerNum}}
-        <br> Coordinator:{{coordName}}
-        <br> ID:{{idNum}}
-      </p>
-    </div>
-    <button id="cancel" (click)="show=false">Cancel</button>
   </div>
 </ion-content>
