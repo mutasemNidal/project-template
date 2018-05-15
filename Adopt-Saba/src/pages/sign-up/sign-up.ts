@@ -24,8 +24,11 @@ export class SignUpPage {
   password: string;
   confirmPassword: string;
   phone: number;
-  coord:string;
+  coord: string;
+  coordID: number;
   coordinatorList = [];
+  coordinatorid;
+
   constructor(public navCtrl: NavController,
     private http: HTTP,
     private alertCtrl: AlertController,
@@ -34,7 +37,6 @@ export class SignUpPage {
   ) {
     this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.PORTRAIT);
     this.getCoordinatorList();
-    console.log("I'm Here "+this.coord);
   }
   private getCoordinatorList() {
     this.http.get(urlCoordinators, {
@@ -42,6 +44,7 @@ export class SignUpPage {
     }, {})
       .then(data => {
         var ob = JSON.parse(data.data);
+        this.coordinatorid = ob;
         for (var i = 0; i < ob.dataList.length; i++) {
           this.coordinatorList[i] = ob.dataList[i].firstName;
         }
@@ -61,12 +64,18 @@ export class SignUpPage {
         }
       ]
     });
+    for (var i = 0; i < this.coordinatorid.dataList.length; i++) {
+      if (this.coordinatorid.dataList[i].firstName == this.coord)
+        this.coordID = this.coordinatorid.dataList[i].id
+    }
+    console.log(this.coord);
     this.http.get(url, {
       userName: this.userName,
       password: this.password,
       email: this.email,
       confirmPass: this.confirmPassword,
-      phoneNumber: this.phone
+      phone: this.phone,
+      coordinatorId: this.coordID
     }, {})
       .then(data => {
         console.log(data.status);
