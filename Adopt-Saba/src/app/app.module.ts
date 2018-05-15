@@ -19,12 +19,13 @@ import { MainAppPageModule } from '../pages/main-app/main-app.module';
 import { SignUpPageModule } from '../pages/sign-up/sign-up.module';
 import { NotificationsPage } from '../pages/notifications/notifications';
 import { NotificationsPageModule } from '../pages/notifications/notifications.module';
-import { HTTP } from '@ionic-native/http';
+import { HttpModule } from '@angular/http';
 import { CalendarPageModule } from '../pages/calendar/calendar.module';
 import { CalendarPage } from '../pages/calendar/calendar';
 import { ProfilePage } from '../pages/profile/profile';
 import { ProfilePageModule } from '../pages/profile/profile.module';
-
+import { HTTP } from '@ionic-native/http';
+import { HttpClientModule } from '@angular/common/http'
 @NgModule({
   declarations: [
     MyApp,
@@ -41,6 +42,8 @@ import { ProfilePageModule } from '../pages/profile/profile.module';
     NotificationsPageModule,
     CalendarPageModule,
     ProfilePageModule,
+    HttpModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp, {
       menuType: 'overlay',
       platforms: {
@@ -66,7 +69,7 @@ import { ProfilePageModule } from '../pages/profile/profile.module';
   providers: [
     StatusBar,
     SplashScreen, Camera, CameraPreview, CallNumber, ScreenOrientation,HTTP,
-    { provide: ErrorHandler, useClass: IonicErrorHandler }
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
   ]
 })
 export class AppModule { }

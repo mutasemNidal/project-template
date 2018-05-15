@@ -47,6 +47,7 @@ export class MainAppPage {
   temp = true;
   temp1 = false;
   show = false;
+  start=false;
   txt = "Start";
   volunteerName = "";
   volunteerNum = "";
@@ -87,6 +88,7 @@ export class MainAppPage {
   }
   /********************************************************************************************************************************************** */
   timerFunc() {
+    this.start=true;
     this.temp1 = true;
     if (this.temp == true) {
       this.temp = false;
@@ -144,6 +146,7 @@ export class MainAppPage {
   }
   /********************************************************************************************************************************************** */
   stop() {
+    this.start=false;
     this.temp = true;
     this.temp1 = false;
     clearInterval(this.intrevalId);

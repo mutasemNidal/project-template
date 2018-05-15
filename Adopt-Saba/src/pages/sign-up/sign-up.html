@@ -35,6 +35,12 @@
             <ion-icon name="ios-phone-portrait-outline" item-left></ion-icon> Contact number</ion-label>
         <ion-input [(ngModel)]="phoneNumber" clearInput type="number"></ion-input>
     </ion-item>
+    <ion-item id="optionList">
+        <ion-label id="listLabel">Choose coordinator: </ion-label>
+        <ion-select>
+            <ion-option *ngFor="let coordinator of coordinatorList">{{coordinator}}</ion-option>
+        </ion-select>
+    </ion-item>
     <div class="btn">
         <button ion-button (click)="join()">Join</button>
     </div>

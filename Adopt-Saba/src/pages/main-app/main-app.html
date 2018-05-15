@@ -76,11 +76,11 @@
       </button>
     </div>
     <div class="btn3">
-      <button (click)="timerFunc()" ion-button>{{txt}}</button>
+      <button *ngIf="start"(click)="timerFunc()" ion-button>{{hourL}}{{hourR}}:{{minuteL}}{{minuteR}}:{{secondL}}{{secondR}}</button>
+      <button *ngIf="!start" (click)="timerFunc()" ion-button>{{txt}}</button>
     </div>
   </div>
   <div class="timer">
-    <p>{{hourL}}{{hourR}}:{{minuteL}}{{minuteR}}:{{secondL}}{{secondR}}</p>
     Latest Picture:
     <img *ngFor="let image of images" [src]="image" />
   </div>

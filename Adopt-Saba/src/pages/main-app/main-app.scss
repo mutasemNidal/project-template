@@ -108,13 +108,13 @@
     height: 70px;
     background:linear-gradient(to left,rgb(253, 58, 33),#FD8E63) ;
 }
-.btn2 button:hover {
-    background:linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
-    background-color:#f24437;
+.btn2 button:visited {
+    background:none;
 }
 .btn2 button:active {
     position:relative;
     top:1px;
+    background:linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
 }
 .btn3{
     margin-top: 3%;
@@ -129,13 +129,13 @@
     height: 180px;
     background:linear-gradient(to left,rgb(253, 58, 33),#FD8E63) ;
 }
-.btn3 button:hover {
-    background:linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
-    background-color:#f24437;
-}
 .btn3 button:active {
     position:relative;
     top:1px;
+    background:linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
+}
+.btn3 button:visited{
+    background: none;
 }
 .timer{
     background: linear-gradient(to right,rgb(253, 58, 33),#FD8E63) ;
