@@ -11,7 +11,7 @@ import { PopoverController } from 'ionic-angular';
 import { NotificationsPage } from '../notifications/notifications';
 import { CalendarPage } from '../calendar/calendar';
 import { ProfilePage } from '../profile/profile';
-
+import { Storage } from '@ionic/storage'
 /**
  * Generated class for the MainAppPage page.
  *
@@ -32,17 +32,26 @@ export class MainAppPage {
   public base64Image: string;
   imagesCount: number;
   images: string[] = [];
+  firstName: string;
+  lastName: string;
+  
   constructor(public navCtrl: NavController,
     public popoverCtrl: PopoverController,
     public menuCtrl: MenuController,
     private screenOrientation: ScreenOrientation,
     public navParams: NavParams,
     private alertCtrl: AlertController,
-    private camera: Camera) {
+    private camera: Camera,
+    private storage: Storage) {
     this.imagesCount = 0;
     this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.PORTRAIT);
-
-
+    storage.get('firstName').then((val) => {
+      this.firstName = val;
+    });
+    storage.get('lastName').then((val) => {
+      this.lastName = val;
+    });
+    
   }
   hourL = 0;
   minuteL = 0;
@@ -57,7 +66,6 @@ export class MainAppPage {
   txt = "Start";
   volunteerName = "";
   volunteerNum = "";
-  coordName = "";
   idNum = "";
   intrevalId: number;
   /********************************************************************************************************************************************** */

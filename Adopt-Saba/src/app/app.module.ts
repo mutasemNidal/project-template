@@ -26,6 +26,7 @@ import { ProfilePage } from '../pages/profile/profile';
 import { ProfilePageModule } from '../pages/profile/profile.module';
 import { HTTP } from '@ionic-native/http';
 import { HttpClientModule } from '@angular/common/http'
+import { IonicStorageModule } from '@ionic/storage'
 @NgModule({
   declarations: [
     MyApp,
@@ -44,6 +45,7 @@ import { HttpClientModule } from '@angular/common/http'
     ProfilePageModule,
     HttpModule,
     HttpClientModule,
+    IonicStorageModule.forRoot(),
     IonicModule.forRoot(MyApp, {
       menuType: 'overlay',
       platforms: {
@@ -68,7 +70,7 @@ import { HttpClientModule } from '@angular/common/http'
   ],
   providers: [
     StatusBar,
-    SplashScreen, Camera, CameraPreview, CallNumber, ScreenOrientation,HTTP,
+    SplashScreen, Camera, CameraPreview, CallNumber, ScreenOrientation, HTTP,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
   ]
 })

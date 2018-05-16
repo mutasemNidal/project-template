@@ -6,29 +6,40 @@
 -->
 <ion-content id="home">
   <ion-menu [content]="mycontent">
-    <ion-header>
+    <!-- <ion-header>
       <div class="toolBar">
         <ion-title>
           <div id="menuTitle">Adopt Saba</div>
           <img id="menuImg" src="../../assets/logo.png" />
         </ion-title>
       </div>
-    </ion-header>
+    </ion-header> -->
     <ion-content class="menuDiv">
       <ion-list>
         <div id="def"></div>
-        <button id="menuItem" (click)="home()" ion-item>
-          <ion-icon id="menuIcon" name="ios-home-outline" item-left></ion-icon> HOME
-        </button>
-        <button id="menuItem" (click)="about()" ion-item>
-          <ion-icon id="menuIcon" name="ios-alert-outline" item-left></ion-icon> About
-        </button>
-        <button id="menuItem" (click)="contact()" ion-item>
-          <ion-icon id="menuIcon" name="ios-contacts-outline" item-left></ion-icon> Contact Us
-        </button>
-        <button id="menuItem" (click)="signout()" ion-item>
-          <ion-icon id="menuIcon" name="ios-log-out-outline" item-left></ion-icon> Sign Out
-        </button>
+        <div>
+          <img id="cover" src="../../assets/imgs/girls.jpeg" alt="mozaz">
+          <div class="personalImg">
+              <img src="../../assets/imgs/picture.jpg" alt="moza">
+          </div>
+          <div id="personalInfo">
+            <p>{{firstName}}  {{lastName}}</p>
+          </div>
+        </div>
+        <div class="lisBtn">
+            <button id="menuItem" (click)="home()" ion-item>
+                <ion-icon id="menuIcon" name="ios-home-outline" item-left></ion-icon> Home
+              </button>
+              <button id="menuItem" (click)="about()" ion-item>
+                <ion-icon id="menuIcon" name="ios-alert-outline" item-left></ion-icon> About
+              </button>
+              <button id="menuItem" (click)="contact()" ion-item>
+                <ion-icon id="menuIcon" name="ios-contacts-outline" item-left></ion-icon> Contact Us
+              </button>
+              <button id="menuItem" (click)="signout()" ion-item>
+                <ion-icon id="menuIcon" name="ios-log-out-outline" item-left></ion-icon> Sign Out
+              </button>
+        </div>
         <div></div>
       </ion-list>
     </ion-content>
@@ -76,7 +87,7 @@
       </button>
     </div>
     <div class="btn3">
-      <button *ngIf="start"(click)="timerFunc()" ion-button>{{hourL}}{{hourR}}:{{minuteL}}{{minuteR}}:{{secondL}}{{secondR}}</button>
+      <button *ngIf="start" (click)="timerFunc()" ion-button>{{hourL}}{{hourR}}:{{minuteL}}{{minuteR}}:{{secondL}}{{secondR}}</button>
       <button *ngIf="!start" (click)="timerFunc()" ion-button>{{txt}}</button>
     </div>
   </div>
