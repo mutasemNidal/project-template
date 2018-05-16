@@ -23,6 +23,8 @@ export class SignInPage {
     private storage: Storage
   ) {
     this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.PORTRAIT);
+    this.userName="";
+    this.password="";
   }
 
   logIN() {
