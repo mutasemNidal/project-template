@@ -32,10 +32,16 @@ export class MainAppPage {
   public base64Image: string;
   imagesCount: number;
   images: string[] = [];
-  constructor(public navCtrl: NavController,public popoverCtrl: PopoverController, public menuCtrl: MenuController, private screenOrientation: ScreenOrientation, public navParams: NavParams, private alertCtrl: AlertController, private camera: Camera) {
+  constructor(public navCtrl: NavController,
+    public popoverCtrl: PopoverController,
+    public menuCtrl: MenuController,
+    private screenOrientation: ScreenOrientation,
+    public navParams: NavParams,
+    private alertCtrl: AlertController,
+    private camera: Camera) {
     this.imagesCount = 0;
     this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.PORTRAIT);
-    // menu.enable(true);
+
 
   }
   hourL = 0;
@@ -47,7 +53,7 @@ export class MainAppPage {
   temp = true;
   temp1 = false;
   show = false;
-  start=false;
+  start = false;
   txt = "Start";
   volunteerName = "";
   volunteerNum = "";
@@ -88,7 +94,7 @@ export class MainAppPage {
   }
   /********************************************************************************************************************************************** */
   timerFunc() {
-    this.start=true;
+    this.start = true;
     this.temp1 = true;
     if (this.temp == true) {
       this.temp = false;
@@ -146,7 +152,7 @@ export class MainAppPage {
   }
   /********************************************************************************************************************************************** */
   stop() {
-    this.start=false;
+    this.start = false;
     this.temp = true;
     this.temp1 = false;
     clearInterval(this.intrevalId);
@@ -305,13 +311,13 @@ export class MainAppPage {
     });
   }
 
-  notify(myEvent){
+  notify(myEvent) {
     let popover = this.popoverCtrl.create(NotificationsPage);
     popover.present({
       ev: myEvent
     });
   }
-  calender(myEvent){
+  calender(myEvent) {
     let popover = this.popoverCtrl.create(CalendarPage);
     popover.present({
       ev: myEvent
