@@ -1,0 +1,35 @@
+#profile{
+    margin-top: -127%;
+    margin-left: 10%;
+    width: 77%;
+    height: 45%;
+    border: 2px solid black;
+    position: fixed;
+    box-shadow: 10px 11px 32px 0px rgba(0,0,0,0.77);
+    background-color: white;
+}
+#cancel{
+    background-color: transparent;
+    margin-top: 3%;
+    margin-left: 40%;
+    color: #005eff;
+    font-size: 17px;
+}
+.divCover{
+    height: 40%;
+    width: 100%;
+}
+.divImg{
+    border-radius: 50%;
+    margin-top: -15%;
+    margin-left: 35%;
+    width: 30%;
+    height: 25%;
+    border: 2px solid black;
+}
+.info{
+    margin-left: 15%;
+}
+.info label{
+    font-size: 17px;
+}
