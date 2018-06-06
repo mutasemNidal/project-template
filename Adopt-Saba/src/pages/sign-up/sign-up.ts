@@ -57,7 +57,7 @@ export class SignUpPage {
   }
   join() {
     let alert = this.alertCtrl.create({
-      title: 'בקשתך נשלחה לרקז נה לחקות עד קבלת האישור',
+      title: 'בקשתך נשלחה לרכז נא לחכות עד קבלת האישור',
       buttons: [
         {
           text: 'submit',

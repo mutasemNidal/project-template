@@ -28,14 +28,6 @@ export class SignInPage {
   }
 
   logIN() {
-    /*
-    dataList":{"id":"3","userName":"Ddd","firstName":"Ddd","lastName":"bb",
-    "birthDay":"0000-00-00","phone":"001122","location":"","identifyCard":"",
-    "Email":"Ddd","image":"http:\/\/www.psdgraphics.com\/file\/add-user-icon.jpg",
-    "ElderName":"ahmad sabah","CoordinatorName":"demo1","CoordinatorLocation":"alquds",
-    "coordinatorImage":"http:\/\/localhost\/adopt-saba\/files\/images\/newUser.png",
-    "coordinatorEmail":"","CoordinatorlastName":"","CoordinatorPhone":""}}
-    */
     this.http.get(this.urlVolunteer, {
       userName: this.userName,
       password: this.password
@@ -44,8 +36,8 @@ export class SignInPage {
         var ob = JSON.parse(data.data);
         console.log(data.data);
         
-        this.access = ob.dataList;
-        if (this.access != false) {
+        this.access = ob.SuccessStatus;
+        if (this.access != false &&ob.dataList!=null ) {
           this.navCtrl.setRoot("MainAppPage");
           this.storage.set('userName', ob.dataList.userName);
           this.storage.set('firstName', ob.dataList.firstName);
