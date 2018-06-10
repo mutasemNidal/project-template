@@ -11,7 +11,8 @@ import { PopoverController } from 'ionic-angular';
 import { NotificationsPage } from '../notifications/notifications';
 import { CalendarPage } from '../calendar/calendar';
 import { ProfilePage } from '../profile/profile';
-import { Storage } from '@ionic/storage'
+import { Storage } from '@ionic/storage';
+import { HTTP } from '@ionic-native/http';
 /**
  * Generated class for the MainAppPage page.
  *
@@ -34,7 +35,9 @@ export class MainAppPage {
   images: string[] = [];
   firstName: string;
   lastName: string;
-  
+  startTime=0;
+  date :Date ;
+  d:number;
   constructor(public navCtrl: NavController,
     public popoverCtrl: PopoverController,
     public menuCtrl: MenuController,
@@ -42,23 +45,32 @@ export class MainAppPage {
     public navParams: NavParams,
     private alertCtrl: AlertController,
     private camera: Camera,
-    private storage: Storage) {
+    private storage: Storage,
+    private http: HTTP,) {
     this.imagesCount = 0;
     this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.PORTRAIT);
+    this.date=new Date();
     storage.get('firstName').then((val) => {
       this.firstName = val;
     });
     storage.get('lastName').then((val) => {
       this.lastName = val;
     });
-    
+    this.http.get(this.meetURL, {}, {})
+    .then(data => {
+      var ob = JSON.parse(data.data);
+      var dataList=ob.dataList;
+      console.log(data.data);
+      this.startTime=dataList.startTime;
+      this.d =new Date(this.date.getTime()-this.startTime).getTime();
+    })
+    .catch(error => {
+    });
   }
-  hourL = 0;
-  minuteL = 0;
-  secondL = 0;
-  hourR = 0;
-  minuteR = 0;
-  secondR = 0;
+  hour = 0;
+  minute = 0;
+  second = 0;
+  tempTime;
   temp = true;
   temp1 = false;
   show = false;
@@ -68,8 +80,11 @@ export class MainAppPage {
   volunteerNum = "";
   idNum = "";
   intrevalId: number;
+  startURL:string="http://adoptsaba.com/volunteer/startMeet";
+  stopURL:string="http://adoptsaba.com/volunteer/endMeet";
+  questionsURL:string="http://adoptsaba.com/volunteer/getQuestions";
+  meetURL:string="http://adoptsaba.com/volunteer/OpenedMeet";
   /********************************************************************************************************************************************** */
-
   pushImage(name: string) {
     this.images[this.imagesCount] = name;
     this.imagesCount++;
@@ -101,7 +116,7 @@ export class MainAppPage {
     });
   }
   /********************************************************************************************************************************************** */
-  timerFunc() {
+  /*timerFunc() {
     this.start = true;
     this.temp1 = true;
     if (this.temp == true) {
@@ -157,9 +172,64 @@ export class MainAppPage {
         }
       }, 1000);
     }
+  }*/
+  timerFunc() {
+    this.http.get(this.startURL, {}, {})
+      .then(data => {
+       
+      })
+      .catch(error => {
+      });
+      this.start = true;
+      this.temp1 = true;
+      if (this.temp == true) {
+        this.temp = false;
+        clearInterval(this.intrevalId);
+        let options={
+          hour:'2-digit',
+          minute:'2-digit',
+          second:'2-digit',
+          timeZone:'UTC'
+        }
+        this.tempTime= new Date(this.d).toLocaleString('en-GB',options);
+        this.txt = "started";
+        this.intrevalId = setInterval(() => {
+          this.d+=1000;
+          this.tempTime= new Date(this.d).toLocaleString('en-GB',options);
+        }, 1000);
+      }
+  }
+  stop() {
+    this.http.get(this.stopURL, {
+    }, {})
+      .then(data => {
+       
+      })
+      .catch(error => {
+      }); 
+      this.start = false;
+      this.temp = true;
+      this.temp1 = false;
+      clearInterval(this.intrevalId);
+      this.intrevalId = -1;
+      if(this.txt!="Start"){
+      
+      
+      } else {
+      let alert = this.alertCtrl.create({
+        title: '!!!תתחיל הטיימר קודם',
+        buttons: [
+          {
+            text: 'submit',
+          }
+        ]
+      });
+      alert.present();
+    }
+    this.txt = "Start";
   }
   /********************************************************************************************************************************************** */
-  stop() {
+ /* stop() {
     this.start = false;
     this.temp = true;
     this.temp1 = false;
@@ -262,7 +332,7 @@ export class MainAppPage {
     // this.hourR = 0;
     // this.minuteR = 0;
     // this.secondR = 0;
-  }
+  }*/
   /********************************************************************************************************************************************** */
 
   call() {

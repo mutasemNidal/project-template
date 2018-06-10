@@ -87,7 +87,7 @@
       </button>
     </div>
     <div class="btn3">
-      <button *ngIf="start" (click)="timerFunc()" ion-button>{{hourL}}{{hourR}}:{{minuteL}}{{minuteR}}:{{secondL}}{{secondR}}</button>
+      <button *ngIf="start" (click)="timerFunc()" ion-button >{{tempTime}}</button>
       <button *ngIf="!start" (click)="timerFunc()" ion-button>{{txt}}</button>
     </div>
   </div>
