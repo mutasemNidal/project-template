@@ -1,0 +1,29 @@
+<!--
+  Generated template for the QuestionBoxPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>question-box</ion-title>
+    <button  (click)="backli()">   <ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon></button> 
+  </ion-navbar>
+
+</ion-header>
+<ion-content padding>
+<div *ngFor="let question of dataList">
+  {{question.text}}
+  <div *ngIf="question.type=='General'">
+      <input type="text" [(ngModel)]="answers[question.QuestionId]">
+  </div>
+  <div *ngIf="question.type=='Multiple'">
+      <div *ngFor="let option of question.Options">
+        <input type="checkbox" [checked]="update" (click)="updateAnswer(option.id,question.QuestionId,update)" value="option.id">
+        {{option.answer}}
+      </div>
+  </div>
+</div>
+<button (click)="submit()">Submit</button>
+</ion-content>
