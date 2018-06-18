@@ -44,7 +44,7 @@ export class QuestionBoxPage implements OnInit {
       console.log(this.answers);
   } 
   submit(){
-    console.log(this.answers[44]);
+    console.log(this.answers[43]);
   }
   updateAnswer(answerId,questionId,value){
     console.log(answerId);

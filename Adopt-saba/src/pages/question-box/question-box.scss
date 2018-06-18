@@ -1,3 +1,51 @@
 page-question-box {
 
+    #home{
+        background:linear-gradient(to right,#fd3a21,#FD8E63) ;
+    }
+    #question{
+        font-size: 22px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    .submit{
+
+        width: 100%;
+        height: 10%;
+        text-align: center;
+    }
+    .submit button{
+        text-align:center;
+        font-family: monospace;
+        font-size: 20px;
+        color: white;
+        width:40%;
+        height: 50%;
+        margin:50px;
+        background:linear-gradient(to left,#fd3a21,#FD8E63) ;
+        border-radius: 20px;
+        box-shadow: 3px 4px 0px 0px #8a2a21;
+        border-radius:10px;
+        display:inline-block;
+        cursor:pointer;
+        text-decoration:none;
+        text-shadow:0px 1px 0px #810e05;
+    }
+    .submit button:hover {
+        background:linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
+        background-color:#f24437;
+    }
+    .submit button:active {
+        position:relative;
+        top:1px;
+    }
+
+    .line {
+        border: 0;
+        height: 1px;
+        background: #333;
+        background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc);
+        background-image: -moz-linear-gradient(left, #ccc, #333, #ccc);
+        background-image: -ms-linear-gradient(left, #ccc, #333, #ccc);
+        background-image: -o-linear-gradient(left, #ccc, #333, #ccc);
+        }
 }

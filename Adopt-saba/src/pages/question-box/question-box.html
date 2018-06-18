@@ -8,22 +8,28 @@
 
   <ion-navbar>
     <ion-title>question-box</ion-title>
-    <button  (click)="backli()">   <ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon></button> 
+    <button (click)="backli()">
+      <ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
+    </button>
   </ion-navbar>
 
 </ion-header>
-<ion-content padding>
-<div *ngFor="let question of dataList">
-  {{question.text}}
-  <div *ngIf="question.type=='General'">
+<ion-content padding id="home">
+  <div id="question" *ngFor="let question of dataList">
+    {{question.text}}
+    <div *ngIf="question.type=='General'">
       <input type="text" [(ngModel)]="answers[question.QuestionId]">
-  </div>
-  <div *ngIf="question.type=='Multiple'">
-      <div *ngFor="let option of question.Options">
-        <input type="checkbox" [checked]="update" (click)="updateAnswer(option.id,question.QuestionId,update)" value="option.id">
-        {{option.answer}}
+    </div>
+
+    <div *ngIf="question.type=='Multiple'">
+      <div id="question" *ngFor="let option of question.Options">
+        <input type="checkbox" [checked]="update" (click)="updateAnswer(option.id,question.QuestionId,update)" value="option.id"> {{option.answer}}
       </div>
+    </div>
+    <hr class="line">
   </div>
-</div>
-<button (click)="submit()">Submit</button>
+  <div class="submit">
+    <button (click)="submit()">Submit</button>
+
+  </div>
 </ion-content>
