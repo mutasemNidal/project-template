@@ -24,11 +24,13 @@ export class SignInPage {
   ) {
     this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.PORTRAIT);
     this.userName="";
-    this.password="";
+   this.password="";
   }
 
   logIN() {
-    this.http.get(this.urlVolunteer, {
+    
+
+   this.http.get(this.urlVolunteer, {
       userName: this.userName,
       password: this.password
     }, {})

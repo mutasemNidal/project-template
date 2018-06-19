@@ -15,6 +15,7 @@ import { Storage } from '@ionic/storage';
 import { HTTP } from '@ionic-native/http';
 import { QuestionBoxPage } from '../question-box/question-box';
 import { ModalController } from 'ionic-angular';
+import { SignInPage } from '../sign-in/sign-in';
 
 /**
  * Generated class for the MainAppPage page.
@@ -93,26 +94,29 @@ export class MainAppPage {
     })
     .catch(error => {
     });*/
-    clearInterval(this.intrevalId);
     this.checkOpenedMeet();
 
   }
- 
+
   /********************************************************************************************************************************************** */
   pushImage(name: string) {
     this.images[this.imagesCount] = name;
     this.imagesCount++;
   }
-    /********************************************************************************************************************************************** */
+  /********************************************************************************************************************************************** */
 
   intrevalDate = setInterval(() => {
     this.myDate = new Date(new Date().getTime() + (3 * 60 * 60 * 1000)).toISOString();
   }, 1000)
   /********************************************************************************************************************************************** */
-  checkOpenedMeet(){
+  checkOpenedMeet() {
     this.http.get(this.meetURL, {}, {}).then(data => {
+
       var ob = JSON.parse(data.data);
       var endList = ob.dataList;
+      if (endList == null) {
+        return;
+      }
       this.d = endList['startTime'];
       console.log(endList['startTime']);
       this.start = true;
@@ -126,23 +130,23 @@ export class MainAppPage {
           second: '2-digit',
           timeZone: 'UTC'
         }
-        var serverTime=parseFloat(this.d);
-        var currentTimeInMs=(new Date()).getTime();
-        var correctTime=currentTimeInMs-serverTime;
-        
-        console.log(new Date(serverTime));
-        
+        var serverTime = parseFloat(this.d);
+        var currentTimeInMs = (new Date()).getTime();
+        var correctTime = currentTimeInMs - serverTime;
+
+
         this.tempTime = new Date(correctTime).toLocaleString('en-GB', options);
         this.txt = "started";
         this.intrevalId = setInterval(() => {
-          var currentTimeInMs=(new Date()).getTime();
-          var correctTime=currentTimeInMs-serverTime;
+          var currentTimeInMs = (new Date()).getTime();
+          var correctTime = currentTimeInMs - serverTime;
           this.d += 1000;
           this.tempTime = new Date(correctTime).toLocaleString('en-GB', options);
         }, 1000);
+        console.log("before " + this.intrevalId);
       }
-    }).catch(error=>{
-      
+    }).catch(error => {
+
     });
   }
 
@@ -172,7 +176,7 @@ export class MainAppPage {
 
     this.http.get(this.startURL, {}, {})
       .then(data => {
-      this.checkOpenedMeet();
+        this.checkOpenedMeet();
       })
       .catch(error => {
         console.log("jkhkhkj")
@@ -185,14 +189,12 @@ export class MainAppPage {
     this.start = false;
     this.temp = true;
     this.temp1 = false;
-    clearInterval(this.intrevalId);
-    this.intrevalId = -1;
+    console.log("after " + this.intrevalId);
     if (this.txt != "Start") {
       this.http.get(this.stopURL, {}, {})
         .then(data => {
           var ob = JSON.parse(data.data);
           var endList = ob.dataList;
-
           MainAppPage.meetId = endList.id;
         })
         .catch(error => {
@@ -200,12 +202,11 @@ export class MainAppPage {
           console.log(error.error);
           console.log(error.headers);
         });
-        clearInterval(this.intrevalId);
-
+      console.log(this.tempTime.toISOString);
       const modal = this.modalCtrl.create(QuestionBoxPage);
       modal.present();
-
-
+      clearInterval(this.intrevalId);
+      this.intrevalId = -1;
     } else {
       let alert = this.alertCtrl.create({
         title: '!!!תתחיל הטיימר קודם',
@@ -250,7 +251,10 @@ export class MainAppPage {
         {
           text: 'confirm',
           handler: () => {
+
             this.navCtrl.setRoot(HomePage);
+
+
           }
         }
       ]
@@ -271,12 +275,12 @@ export class MainAppPage {
   }
   /**********************************************************************************************************************************************/
   showProfile(myEvent) {
-    /*  let popover = this.popoverCtrl.create(ProfilePage);
-      popover.present({
-        ev: myEvent
-      });*/
-    const modal = this.modalCtrl.create(ProfilePage);
-    modal.present();
+    let popover = this.popoverCtrl.create(ProfilePage);
+    popover.present({
+      ev: myEvent
+    });
+    /*    const modal = this.modalCtrl.create(ProfilePage);
+        modal.present();*/
   }
 
   notify(myEvent) {

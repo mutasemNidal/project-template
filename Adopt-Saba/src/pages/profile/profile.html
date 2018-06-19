@@ -8,34 +8,44 @@
     <ion-navbar>
       <ion-title >  Profile {{firstName}}  {{lastName}}</ion-title>
     </ion-navbar>
-    <button (click)="backli()">
-      <ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>            
-    </button>
   </ion-header>
-  <ion-content  padding>
+  <ion-content  id="home"  padding>
     <ion-list >
       <table class="profileTable"  width="100%" >
-        <tr>
-            <td colspan="2" class="volunteerImage" width="40%"><img src="../../assets/pro.jpg" alt=""></td>
-        </tr>
+        <div id="back">
+        <div class="background">
+            <img src="../../assets/elder.jpg" alt="">
+
+        </div>
+            <tr  >
+                <div  class="volunteerImage">
+                    <img src="../../assets/pro.jpg" alt="">
+                  </div>
+            </tr>
+        </div>
+     
         <tr>
           <td>
             <ul class="listInfo">
                <li> Username : {{userName}}</li>
-               <li> Full Name : {{Name}}</li>
+               <hr>
                <li> Phone : {{phone}}</li>
+               <hr>
                <li> Email : {{Email}}</li>
+               <hr>
                <li> Address : {{location}}</li> 
+               <hr>
+               <li> Birth Day : {{birthDay}}</li>
+               <hr>
+               <li> Coordinator  : {{CoordinatorName}}</li>
+               <hr>
+               <li> Elder : {{elder}}</li>
             </ul> 
             
           </td>
           <td>
               <ul class="listInfo">
-                  <li> Birth Day : {{birthDay}}</li>
-                  <li> identifyCard : {{identifyCard}}</li>
-                  <li> Coordinator  : {{CoordinatorName}}</li>
-                  <li> Elder : {{elder}}</li>
-                  <li> Coordinator phone : {{cPhone}}</li>
+                 
 
                </ul> 
           </td>
