@@ -12,18 +12,38 @@
 
 </ion-header>
 
-
 <ion-content padding>
-    <ion-list>
-        <p>helloworldghcgvjbkjbjvhvkb,nhgjvbmghvjhbjnfchgvjhbkj,n  </p>
-        <hr>
-        <p>hgvbkjnlkbjcdxgfhcgvhbjnlkm;l,lmb</p>
-        <hr>
-        <p>helloworldghcgvjbkjbjvhvkb,nhgjvbmghvjhbjnfchgvjhbkj,n  </p>
-        <hr>
-        <p>qwertyuiop[]\asdfghjkl;'</p>
-        <hr>
-        <p>helloworldghcgvjbkjbjvhvkb,nhgjvbmghvjhbjnfchgvjhbkj,n  </p>
-        <hr>
-      </ion-list>
+  <ion-list>
+    <table class="table">
+      <tr>
+        
+          <th> Date</th>
+          <th>startTime</th>
+          <th>endTime</th>
+          <th> duration </th>
+        
+      </tr>
+
+
+      <tr *ngFor="let meet of dataList">
+        <td>
+          {{meet.day}}/{{meet.month}}
+        </td>
+        <td>
+          {{meet.startTime}}
+        </td>
+        <td>
+          {{meet.endTime}}
+        </td>
+        <td>
+          {{meet.meetLen}}
+        </td>
+      </tr>
+
+    </table>
+
+
+    <hr>
+
+  </ion-list>
 </ion-content>
