@@ -19,6 +19,8 @@ import { MainAppPageModule } from '../pages/main-app/main-app.module';
 import { SignUpPageModule } from '../pages/sign-up/sign-up.module';
 import { NotificationsPage } from '../pages/notifications/notifications';
 import { NotificationsPageModule } from '../pages/notifications/notifications.module';
+import { QuestionBoxPage } from '../pages/question-box/question-box';
+import { QuestionBoxPageModule } from '../pages/question-box/question-box.module';
 import { HttpModule } from '@angular/http';
 import { CalendarPageModule } from '../pages/calendar/calendar.module';
 import { CalendarPage } from '../pages/calendar/calendar';
@@ -41,6 +43,7 @@ import { IonicStorageModule } from '@ionic/storage'
     MainAppPageModule,
     SignUpPageModule,
     NotificationsPageModule,
+    QuestionBoxPageModule,
     CalendarPageModule,
     ProfilePageModule,
     HttpModule,

@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { Storage } from '@ionic/storage'
+import { Storage } from '@ionic/storage';
+import { MainAppPage } from '../main-app/main-app';
+
 
 @IonicPage()
 @Component({
@@ -70,5 +72,8 @@ export class ProfilePage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad ProfilePage');
   }
+  backli() {
+    this.navCtrl.setRoot(MainAppPage);
 
+  }
 }
