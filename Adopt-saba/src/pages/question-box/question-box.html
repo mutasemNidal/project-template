@@ -18,12 +18,13 @@
   <div id="question" *ngFor="let question of dataList">
     {{question.text}}
     <div *ngIf="question.type=='General'">
-      <input type="text" [(ngModel)]="answers[question.QuestionId]">
+      <input type="text"(input)="changeAnswer($event.target.value,question.QuestionId)" [(ngModel)]="answers[question.QuestionId]">
     </div>
 
     <div *ngIf="question.type=='Multiple'">
       <div id="question" *ngFor="let option of question.Options">
-        <input type="checkbox" [checked]="update" (click)="updateAnswer(option.id,question.QuestionId,update)" value="option.id"> {{option.answer}}
+        <input #box type="checkbox"   (click)="updateAnswer(option.id,question.QuestionId,box.checked)" > 
+        {{option.answer}}
       </div>
     </div>
     <hr class="line">
