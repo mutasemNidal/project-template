@@ -79,7 +79,7 @@ Please visit our [wiki](../../wiki) for furthur project info:
 - [Iteration 1 - MVP](https://github.com/mutasemNidal/Adopt-Saba/wiki/MVP)
 - [Iteration 2 - appFinishing](https://github.com/mutasemNidal/Adopt-Saba/wiki/Iter2-app-finishing)
 - [Iteration 3 - WebSiteFinishing](https://github.com/mutasemNidal/Adopt-Saba/wiki/iter3-WebSiteFinishing)
-- [Iteration 4 - XYZ]()
+- [Iteration 4 - XYZ](https://github.com/mutasemNidal/Adopt-Saba/wiki/iter4-Bug-and-design-fix)
 
 
 
