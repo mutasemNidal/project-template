@@ -69,18 +69,19 @@ export class SignUpPage {
         this.coordID = this.coordinatorid.dataList[i].id
     }
     console.log(this.coord);
+    console.log( this.confirmPassword)
     this.http.get(url, {
       userName: this.userName,
-      password: this.password,
-      email: this.email,
-      confirmPass: this.confirmPassword,
+      passWord: this.password,
+      Email: this.email,
+      confirmPassword: this.confirmPassword,
       phone: this.phone,
       coordinatorId: this.coordID
     }, {})
       .then(data => {
         console.log(data.status);
         console.log(data.data);
-      })
+      }) 
       .catch(error => {
         console.log(error.status);
         console.log(error.error);

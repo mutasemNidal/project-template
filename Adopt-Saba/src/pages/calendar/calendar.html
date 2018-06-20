@@ -16,7 +16,7 @@
   <ion-list>
     <table class="table">
       <tr>
-        
+          <th> #</th>
           <th> Date</th>
           <th>startTime</th>
           <th>endTime</th>
@@ -25,7 +25,10 @@
       </tr>
 
 
-      <tr *ngFor="let meet of dataList">
+      <tr *ngFor="let meet of dataList,let key = index">
+        <td>
+          {{key+1}}
+        </td>
         <td>
           {{meet.day}}/{{meet.month}}
         </td>
